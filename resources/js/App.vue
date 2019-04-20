@@ -1,19 +1,12 @@
 <template>
-  <div>
-    <Header />
-    <main>
-      <RouterView />
-    </main>
-  </div>
+  <transition enter-active-class="animated fadeIn">
+    <router-view></router-view>
+  </transition>
 </template>
 
 <script>
 
-import Header from './components/Header'
-
 export default {
-    components: {
-        Header,
-    }
+  
 }
 </script>

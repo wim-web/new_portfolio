@@ -1,20 +1,32 @@
+$tab:  768px;
+$pc: 1025px;
 
-// Body
-$body-bg: #f8fafc;
+@keyframes ready {
+    0% {
+        color: #fff;
+    }
 
-// Typography
-$font-family-sans-serif: "Nunito", sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+    50% {
+        color: #ff0000;
+    }
 
-// Colors
-$blue: #3490dc;
-$indigo: #6574cd;
-$purple: #9561e2;
-$pink: #f66D9b;
-$red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+    100% {
+        color: #fff;
+    }
+}
+
+@mixin before ($color) {
+    border-left: solid 1px $color;
+    border-top: solid 1px $color;
+    border-bottom: solid 1px $color;
+    left: 0;
+}
+
+@mixin after ($color) {
+    content: '';
+    border-top: solid 1px $color;
+    border-right: solid 1px $color;
+    border-bottom: solid 1px $color;
+    right: 0;
+}
+
