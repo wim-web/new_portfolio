@@ -19,7 +19,7 @@ class CreateImagesTable extends Migration
             $table->unsignedinteger('work_id');
             $table->timestamps();
 
-            $table->foreign('work_id')->references('id')->on('works');
+            $table->foreign('work_id')->references('id')->on('works')->onDelete('cascade');
 
         });
     }

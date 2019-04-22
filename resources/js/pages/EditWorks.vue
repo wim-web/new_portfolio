@@ -21,6 +21,9 @@ export default {
             this.works = response.data
             console.log(response)
         }
-    }
+    },
+    created() {
+        this.getWorks();
+    },
 }
 </script>

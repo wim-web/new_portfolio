@@ -2303,6 +2303,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       return getWorks;
     }()
+  },
+  created: function created() {
+    this.getWorks();
   }
 });
 

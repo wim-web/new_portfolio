@@ -19,8 +19,8 @@ class CreateWorkSkillTable extends Migration
             $table->unsignedinteger('skill_id');
             $table->timestamps();
 
-            $table->foreign('work_id')->references('id')->on('works');
-            $table->foreign('skill_id')->references('id')->on('skills');
+            $table->foreign('work_id')->references('id')->on('works')->onDelete('cascade');
+            $table->foreign('skill_id')->references('id')->on('skills')->onDelete('cascade');
         });
     }
 
