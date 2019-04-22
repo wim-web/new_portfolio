@@ -1,14 +1,26 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Cute+Font');
 
 // Variables
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+//file
+@import 'reset';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+html {
+  height: 100%;
+}
+
+body {
+  background: #f8fafc;
+  font: {
+    // size: 0.9rem;
+    family: "Cute Font";
+  }
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
 }
