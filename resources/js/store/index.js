@@ -4,6 +4,8 @@ import Vuex from 'vuex'
 import header from './header'
 import auth from './auth'
 import about from './about'
+import cate from './category'
+import loading from './loading'
 import createPersistedState from 'vuex-persistedstate';
 
 Vue.use(Vuex)
@@ -13,6 +15,8 @@ const store = new Vuex.Store({
         header,
         auth,
         about,
+        cate,
+        loading,
     },
     plugins: [createPersistedState({
         key: 'PortfoliO',

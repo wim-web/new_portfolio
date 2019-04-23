@@ -1,14 +1,51 @@
 <template>
     <div>
-        <h2>works</h2>
+        <Loading v-if="loading"/>
+        <template v-if="!loading">
+            <Work
+            v-for="work in works"
+            :key="work.id"
+            :item="work"
+        />
+        </template>
+        
     </div>
 </template>
 
 <script>
+import Work from '../components/Work'
+import Loading from '../components/Loading'
 export default {
+    data () {
+        return {
+            works: [],
+        }
+    },
+    components: {
+        Work,
+        Loading,
+    },
+    methods: {
+        async getWorks () {
+            this.$store.commit('loading/setLoading', true)
+            const response = await axios.get('/api/works')
+            this.works = response.data
+            this.$store.commit('loading/setLoading', false)
+        },
+    },
+    computed: {
+        loading () {
+            return this.$store.state.loading.loading
+        }
+    },
+    beforeCreate () {
+        
+    },
     created: function () {
         this.$store.dispatch('header/setIsSmall', true)
         this.$store.dispatch('header/setHeaderPlaceHolder', 'Enter top OR about')
+        this.getWorks()
+        
     },
 }
 </script>

@@ -2,7 +2,11 @@
   <div class="wrapper">
     <Header />
     <main>
-      <router-view></router-view>
+      <transition leave-active-class="animated fadeOutDown" enter-active-class="animated fadeIn">
+        <router-view></router-view>
+      </transition>
+        
+      
     </main>
   </div>
 </template>
@@ -17,3 +21,7 @@ export default {
     },
 }
 </script>
+
+<style lang="scss" scoped>
+
+</style>

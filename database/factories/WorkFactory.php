@@ -9,8 +9,8 @@ use App\Work;
 $factory->define(Work::class, function (Faker $faker) {
     return [
         //
-        'title' => $faker->word,
-        'body' => $faker->sentence(),
+        'title' => 'titletitletitletitle',
+        'body' => '本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文',
         'link' => $faker->url,
         'thumbnail' => $faker->imageUrl(),
     ];

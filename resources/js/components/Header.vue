@@ -48,7 +48,7 @@ export default {
   }
 
   &--small {
-    height: 200px;
+    height: 55vw;
   }
 }
 </style>

@@ -6,6 +6,7 @@ import store from './store/index'
 import Top from './pages/Top'
 import About from './pages/About'
 import Works from './pages/Works'
+import WorkDetail from './pages/WorkDetail'
 
 import Login from './pages/Login'
 import Edit from './pages/Edit'
@@ -35,6 +36,14 @@ const routes = [
                     title: 'About',
                 },
             },
+            {
+                path: 'works/:id',
+                component: WorkDetail,
+                props: true,
+                meta: {
+                    title: 'Detail'
+                }
+            }
         ]
     },
     {
@@ -86,6 +95,9 @@ const routes = [
 const router = new VueRouter({
     mode: 'history',
     routes,
+    scrollBehavior () {
+        return { x: 0, y: 0 }
+    },
 })
 
 export default router
