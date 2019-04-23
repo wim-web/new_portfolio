@@ -81,11 +81,11 @@ export default {
     border-bottom: 1px #000 solid;
     background: transparent;
     font: {
-      size: 10vw;
+      size: calc(35px + 2vw);
       family: "Cute Font";
     }
     text-align: center;
-    width: 70%;
+    width: 51%;
     color: #000;
     margin-bottom: 20px;
     transition: .5s;
@@ -107,7 +107,7 @@ export default {
     &-text {
       font: {
         family: "Cute Font";
-        size: 7vw;
+        size: calc(20px + 2vw);
       }
       color: grey;
     }

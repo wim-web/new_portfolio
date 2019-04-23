@@ -15,7 +15,7 @@
     padding: 0.2em 1em;
     text-decoration: none;
     border-radius: 3px;
-    font-size: 8vw;
+    font-size: calc(26px + 1vw);
     margin-bottom: 5px;
 }
 .sns-wrap {
@@ -33,17 +33,17 @@
 }
 
 .icon {
-    font-size: 5vw;
+    font-size: calc(18px + 1vw);
 }
 
 @media screen and (min-width: 768px) {
     .sns {
-        font-size: 4vw;
+        font-size: 34px;
         margin-bottom: 10px;
     }
 
     .icon {
-        font-size: 3vw;
+        font-size: 25px;
     }
 }
 </style>

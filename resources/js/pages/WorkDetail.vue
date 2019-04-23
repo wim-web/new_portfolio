@@ -69,7 +69,7 @@ export default {
     },
     created() {
         this.$store.dispatch('header/setIsSmall', true)
-        this.$store.dispatch('header/setHeaderPlaceHolder', 'Enter about OR works')
+        this.$store.dispatch('header/setHeaderPlaceHolder', 'about OR works')
         this.getWork()
     },
 }
@@ -104,13 +104,13 @@ export default {
 
 .title {
     &__text {
-        font-size: 12vw;
+        font-size: calc(45px + 1vw);
     }
     &__link {
     position: relative;
     display: inline-block;
     font-weight: bold;
-    font-size: 4.5vw;
+    font-size: calc(22px + 0.25vw);
     margin-left: 1em;
     padding: 0.25em 0.5em;
     text-decoration: none;
@@ -127,9 +127,9 @@ export default {
 }
 
 .text {
-    font-size: 5vw;
+    font-size: calc(14px + 0.25vw);
     padding: 10px;
-    line-height: 8vw;
+    line-height: calc(30px + 0.5vw);
     letter-spacing: 0.2em;
     color: rgb(46, 46, 46);
 }
@@ -146,4 +146,20 @@ export default {
     padding: 10px;
 }
 
+@media screen and (min-width: 768px) {
+    title {
+        &__text {
+            font-size: 52px;
+        }
+        &__link {
+
+        }
+    }
+
+    .text {
+        font-size: calc(14px + 0.25vw);
+        line-height: 30px;
+        letter-spacing: 0.4em;
+    }
+}
 </style>

@@ -104,14 +104,14 @@ export default {
 }
 
 .title {
-    font-size: 12vw;
+    font-size: calc(45px + 1vw);
     color: rgb(46, 46, 46);
 }
 
 .text {
-    font-size: 5vw;
+    font-size: calc(14px + 0.25vw);
     padding: 10px;
-    line-height: 8vw;
+    line-height: calc(30px + 0.5vw);
     letter-spacing: 0.2em;
     color: rgb(46, 46, 46);
 }
@@ -129,13 +129,13 @@ export default {
         width: 85%;
     }
     .title {
-        font-size: 9vw;
+        font-size: 52px;
     }
 
     .text {
-        font-size: 2.5vw;
-        line-height: 5vw;
-        letter-spacing: 0.2em;
+        font-size: calc(14px + 0.25vw);
+        line-height: 30px;
+        letter-spacing: 0.4em;
     }
 
     .skill-wrap {

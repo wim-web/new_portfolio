@@ -65,7 +65,7 @@ export default {
 
   //text
   &__text {
-    font-size: 13vw;
+    font-size: calc(45px + 2vw);
   }
 
   //input
@@ -75,14 +75,16 @@ export default {
     border-bottom: 1px #fff solid;
     background: transparent;
     font: {
-      size: 10vw;
+      size: calc(35px + 2vw);
       family: "Cute Font";
     }
     text-align: center;
-    width: 70%;
     color: grey;
     margin-bottom: 20px;
     transition: .5s;
+    width: 70%;
+    max-width: 360px;
+    display: inline-block;
   }
 
   &__input:focus {
@@ -102,7 +104,7 @@ export default {
     &-text {
       font: {
         family: "Cute Font";
-        size: 7vw;
+        size: calc(20px + 2vw);
       }
     }
 
@@ -126,6 +128,21 @@ export default {
 
     &--ready {
       animation: ready 2s infinite;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .input-link{
+    &__text {
+      font-size: 60px;
+    }
+    &__input {
+      font-size: 50px;
+      margin-bottom: 25px;
+    }
+    &__button-text {
+      font-size: 35px;
     }
   }
 }

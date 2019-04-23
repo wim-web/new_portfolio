@@ -4,7 +4,7 @@
 
 <style lang="scss" scoped>
 .loading {
-    font-size: 20vw;
+    font-size: calc(45px + 1vw);
     text-align: center;
 }
 </style>

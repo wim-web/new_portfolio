@@ -32,4 +32,14 @@ export default {
         vertical-align: middle;
     }
 }
+
+@media screen and (min-width: 768px) {
+    .work {
+        &__img {
+            width: 100%;
+            max-width: 80%;
+            vertical-align: middle;
+        }
+    }
+}
 </style>

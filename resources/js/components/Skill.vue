@@ -35,7 +35,7 @@ export default {
     padding: 0.2em 1em;
     text-decoration: none;
     border-radius: 3px;
-    font-size: 8vw;
+    font-size: calc(26px + 1vw);
     margin-bottom: 5px;
 }
 
@@ -56,7 +56,7 @@ export default {
 
 @media screen and (min-width: 768px) {
     .skill {
-        font-size: 4vw;
+        font-size: 34px;
         margin-bottom: 10px;
     }
 }

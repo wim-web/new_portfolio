@@ -47,13 +47,12 @@ export default {
     &__btn {
         font-family: "Cute Font";
         display: inline-block;
-        padding: 0.2em 0.2em;
         text-decoration: none;
         border-radius: 3px;
         width: 24%;
         color: grey;
         border: solid 2px grey;
-        font-size: 5vw;
+        font-size: calc(26px + 1vw);
     }
 }
 
@@ -80,7 +79,7 @@ export default {
 @media screen and (min-width: 768px) {
     .category {
     &__btn {
-        font-size: 4vw;
+        font-size: 36px;
     }
 }
 }
