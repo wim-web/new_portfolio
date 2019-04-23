@@ -23,3 +23,4 @@ Route::put('/about/skill/{id}', 'AboutController@updateSkill');
 Route::delete('/about/skill/{id}', 'AboutController@deleteSkill');
 // work
 Route::get('/works', 'WorkController@index');
+Route::get('/works/{id}', 'WorkController@show');

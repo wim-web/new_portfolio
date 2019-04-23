@@ -1,10 +1,16 @@
 <template>
     <div>
+        <router-link to="/edit/works/register">register work</router-link>
         <template v-for="work in works">
-            <img :src="work.thumbnail" width="200px" height="200px">
-            <p>{{ work.title }}</p>
+            <div :key="work.id">
+                <img :src="work.thumbnail" width="200px" height="200px">
+                <p>{{ work.title }}</p>
+                <router-link :to="`/edit/works/${work.id}`">
+                    edit
+                </router-link>
+                </div>
         </template>
-        <button @click="getWorks">get works</button>
+        
     </div>
 </template>
 

@@ -12,6 +12,7 @@ import Edit from './pages/Edit'
 import EditAbout from './pages/EditAbout'
 import EditWorks from './pages/EditWorks'
 import EditWorkDetail from './pages/EditWorkDetail'
+import RegisterWork from './pages/RegisterWork'
 
 Vue.use(VueRouter)
 
@@ -67,9 +68,15 @@ const routes = [
                 component: EditWorks,
             },
             {
-                path: 'work/detail',
+                path: 'works/register',
+                component:RegisterWork,
+            },
+            {
+                path: 'works/:id',
+                props: true,
                 component: EditWorkDetail,
-            }
+            },
+            
         ]
     }
     

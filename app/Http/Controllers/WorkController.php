@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Work;
 
 class WorkController extends Controller
 {
@@ -11,5 +12,12 @@ class WorkController extends Controller
     {
         $works = \App\Work::all();
         return $works;
+    }
+
+    public function show($id)
+    {
+        $work = Work::where('id', $id)->with(['images', 'skills'])->get();
+
+        return $work;
     }
 }
