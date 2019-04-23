@@ -34,21 +34,33 @@ export default {
 @import '../../sass/_variables';
 
 .header{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(46, 46, 46);
-  color: #fff;
-  transition: 3s;
-
-  &-wrapper {
     width: 100%;
-  }
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(46, 46, 46);
+    color: #fff;
+    transition: 3s;
 
-  &--small {
-    height: 55vw;
-  }
+    &-wrapper {
+        width: 100%;
+    }
+    
+    &--small {
+        height: 55vw;
+    }
+}
+
+@media screen and (min-width: $tab) {
+    .header {
+        &--small {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    }
 }
 </style>

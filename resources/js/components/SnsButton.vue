@@ -35,6 +35,17 @@
 .icon {
     font-size: 5vw;
 }
+
+@media screen and (min-width: 768px) {
+    .sns {
+        font-size: 4vw;
+        margin-bottom: 10px;
+    }
+
+    .icon {
+        font-size: 3vw;
+    }
+}
 </style>
 
 

@@ -77,4 +77,11 @@ export default {
     color: #67ff88;
     border: solid 2px #67ff88;
 }
+@media screen and (min-width: 768px) {
+    .category {
+    &__btn {
+        font-size: 4vw;
+    }
+}
+}
 </style>

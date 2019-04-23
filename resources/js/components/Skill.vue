@@ -53,4 +53,11 @@ export default {
     color: #67ff88;
     border: solid 2px #67ff88;
 }
+
+@media screen and (min-width: 768px) {
+    .skill {
+        font-size: 4vw;
+        margin-bottom: 10px;
+    }
+}
 </style>

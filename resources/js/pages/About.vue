@@ -124,4 +124,23 @@ export default {
     padding: 10px;
 }
 
+@media screen and (min-width: 768px) {
+    .wrapper {
+        width: 85%;
+    }
+    .title {
+        font-size: 9vw;
+    }
+
+    .text {
+        font-size: 2.5vw;
+        line-height: 5vw;
+        letter-spacing: 0.2em;
+    }
+
+    .skill-wrap {
+        margin-top: 10px;
+    }
+}
+
 </style>
