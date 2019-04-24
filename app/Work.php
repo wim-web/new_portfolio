@@ -11,11 +11,6 @@ class Work extends Model
         'updated_at', 'created_at',
     ];
 
-    public function images()
-    {
-        return $this->hasMany('App\Image');
-    }
-
     public function skills()
     {
         return $this->belongsToMany('App\Skill');

@@ -1,7 +1,15 @@
 <template>
     <div class="edit-wrapper">
-        <router-link to="/edit/about">About</router-link>
-        <router-link to="/edit/works">Works</router-link>
+        <router-link to="/edit/about"
+            class="tab"
+            :class="{ 'tab--current': true }">
+            About
+        </router-link>
+        <router-link to="/edit/works"
+            class="tab"
+            :class="{ 'tab--current': true }">
+            Works
+        </router-link>
         <div>
             <router-view></router-view>
         </div>

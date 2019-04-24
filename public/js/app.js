@@ -2167,6 +2167,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   methods: {
     logout: function () {
@@ -41018,9 +41026,25 @@ var render = function() {
     "div",
     { staticClass: "edit-wrapper" },
     [
-      _c("router-link", { attrs: { to: "/edit/about" } }, [_vm._v("About")]),
+      _c(
+        "router-link",
+        {
+          staticClass: "tab",
+          class: { "tab--current": true },
+          attrs: { to: "/edit/about" }
+        },
+        [_vm._v("\n        About\n    ")]
+      ),
       _vm._v(" "),
-      _c("router-link", { attrs: { to: "/edit/works" } }, [_vm._v("Works")]),
+      _c(
+        "router-link",
+        {
+          staticClass: "tab",
+          class: { "tab--current": true },
+          attrs: { to: "/edit/works" }
+        },
+        [_vm._v("\n        Works\n    ")]
+      ),
       _vm._v(" "),
       _c("div", [_c("router-view")], 1),
       _vm._v(" "),

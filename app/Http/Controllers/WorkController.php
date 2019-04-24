@@ -16,7 +16,7 @@ class WorkController extends Controller
 
     public function show($id)
     {
-        $work = Work::where('id', $id)->with(['images', 'skills'])->get();
+        $work = Work::where('id', $id)->with(['skills'])->get();
 
         return $work;
     }
