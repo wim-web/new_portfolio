@@ -40,6 +40,17 @@
     .sns {
         font-size: 34px;
         margin-bottom: 10px;
+        transition: .5s;
+    }
+
+    .twitter:hover {
+        background-color: #67c5ff;
+        color: #fff;
+    }
+
+    .github:hover {
+        background-color: #fdeb4a;
+        color: #fff;
     }
 
     .icon {

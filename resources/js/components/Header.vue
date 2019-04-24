@@ -63,4 +63,12 @@ export default {
         }
     }
 }
+@media screen and (min-width: $pc) {
+    .header {
+        &--small {
+            width: 512px;
+            left: calc(calc(100% - 1024px) / 2);
+        }
+    }
+}
 </style>
