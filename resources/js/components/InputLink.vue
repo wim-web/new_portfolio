@@ -65,7 +65,7 @@ export default {
 
   //text
   &__text {
-    font-size: calc(45px + 2vw);
+    font-size: calc(42px + 2.5vw);
   }
 
   //input
@@ -75,14 +75,14 @@ export default {
     border-bottom: 1px #fff solid;
     background: transparent;
     font: {
-      size: calc(35px + 2vw);
+      size: calc(32px + 2.5vw);
       family: "Cute Font";
     }
     text-align: center;
     color: grey;
     margin-bottom: 20px;
     transition: .5s;
-    width: 70%;
+    width: 80%;
     max-width: 360px;
     display: inline-block;
   }

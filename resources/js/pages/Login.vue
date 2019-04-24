@@ -140,6 +140,22 @@ export default {
   color: #000;
 }
 
+@media screen and (min-width: 768px) {
+  .login-form {
+    &__input {
+      font-size: 50px;
+      width: 350px;
+      display: block;
+      margin: 0 auto 20px auto;
+    }
+    &__button {
+      &-text {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
 
 </style>
 

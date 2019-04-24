@@ -32,6 +32,7 @@ a {
 }
 
 .edit-wrapper {
-    font-size: 12vw;
+    font-size: 18px;
+    font-family: "Kosugi Maru";
 }
 </style>
