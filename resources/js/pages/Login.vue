@@ -33,7 +33,7 @@ export default {
         },
         async login () {
           const response = await axios.post('/api/login', this.formData).catch(err => err.response)
-          console.log(response)
+          
           if (response.status === 200 && response.data.name) {
             this.$store.commit('auth/login')
             this.$router.push('/edit')

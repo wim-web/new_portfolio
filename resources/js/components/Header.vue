@@ -41,7 +41,7 @@ export default {
     align-items: center;
     background-color: rgb(46, 46, 46);
     color: #fff;
-    transition: 3s;
+    transition: 2s;
 
     &-wrapper {
         width: 100%;

@@ -16,6 +16,7 @@ export default {
             await axios.post('/api/logout')
             this.$store.commit('auth/logout')
             this.$router.push('/')
+            this.$store.dispatch('header/resetState')
         }
     },
     beforeCreate() {

@@ -1783,6 +1783,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -2181,8 +2183,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 2:
                 this.$store.commit('auth/logout');
                 this.$router.push('/');
+                this.$store.dispatch('header/resetState');
 
-              case 4:
+              case 5:
               case "end":
                 return _context.stop();
             }
@@ -2698,10 +2701,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 2:
                 response = _context.sent;
-                console.log(response);
 
                 if (!(response.status === 200 && response.data.name)) {
-                  _context.next = 10;
+                  _context.next = 9;
                   break;
                 }
 
@@ -2709,17 +2711,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 this.$router.push('/edit');
                 return _context.abrupt("return", false);
 
-              case 10:
+              case 9:
                 if (response.status === 422) {
                   alert(response.data.message);
                 } else {
                   alert('予期せぬエラー');
                 }
 
-              case 11:
+              case 10:
                 this.$router.push('/login');
 
-              case 12:
+              case 11:
               case "end":
                 return _context.stop();
             }
@@ -7622,7 +7624,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n@keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n.header[data-v-1f42fb90] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #2e2e2e;\n  color: #fff;\n  transition: 3s;\n}\n.header-wrapper[data-v-1f42fb90] {\n  width: 100%;\n}\n.header--small[data-v-1f42fb90] {\n  height: calc(200px + 10vw);\n}\n@media screen and (min-width: 768px) {\n.header--small[data-v-1f42fb90] {\n    height: 100%;\n    width: 50%;\n    position: fixed;\n    top: 0;\n    left: 0;\n}\n}\n@media screen and (min-width: 1025px) {\n.header--small[data-v-1f42fb90] {\n    width: 512px;\n    left: calc(calc(100% - 1024px) / 2);\n}\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n@keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n.header[data-v-1f42fb90] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #2e2e2e;\n  color: #fff;\n  transition: 2s;\n}\n.header-wrapper[data-v-1f42fb90] {\n  width: 100%;\n}\n.header--small[data-v-1f42fb90] {\n  height: calc(200px + 10vw);\n}\n@media screen and (min-width: 768px) {\n.header--small[data-v-1f42fb90] {\n    height: 100%;\n    width: 50%;\n    position: fixed;\n    top: 0;\n    left: 0;\n}\n}\n@media screen and (min-width: 1025px) {\n.header--small[data-v-1f42fb90] {\n    width: 512px;\n    left: calc(calc(100% - 1024px) / 2);\n}\n}", ""]);
 
 // exports
 
@@ -40506,9 +40508,17 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "transition",
-    { attrs: { "enter-active-class": "animated fadeIn" } },
-    [_c("div", { staticClass: "content" }, [_c("router-view")], 1)]
+    "div",
+    { staticClass: "content" },
+    [
+      _c(
+        "transition",
+        { attrs: { "enter-active-class": "animated fadeIn" } },
+        [_c("router-view")],
+        1
+      )
+    ],
+    1
   )
 }
 var staticRenderFns = []

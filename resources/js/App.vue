@@ -1,9 +1,11 @@
 <template>
+<div class="content">
   <transition enter-active-class="animated fadeIn">
-    <div class="content">
+    
       <router-view></router-view>
-    </div>
+    
   </transition>
+</div>
 </template>
 
 <script>
