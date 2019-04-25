@@ -1,11 +1,11 @@
 <template>
-<div class="content">
-  <transition enter-active-class="animated fadeIn">
-    
-      <router-view></router-view>
-    
-  </transition>
-</div>
+  <div class="content">
+    <transition enter-active-class="animated fadeIn">
+      
+        <router-view></router-view>
+      
+    </transition>
+  </div>
 </template>
 
 <script>
@@ -18,9 +18,8 @@ export default {
 <style lang="scss" scoped>
 .content {
   max-width: 1024px;
-  min-height: 100vh;
+  height: 100%;
   margin: 0 auto;
-  background: rgba(224, 224, 224, 0.3);
 }
 </style>
 

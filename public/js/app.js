@@ -7736,7 +7736,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ".content[data-v-f348271a] {\n  max-width: 1024px;\n  min-height: 100vh;\n  margin: 0 auto;\n  background: rgba(224, 224, 224, 0.3);\n}", ""]);
+exports.push([module.i, ".content[data-v-f348271a] {\n  max-width: 1024px;\n  height: 100%;\n  margin: 0 auto;\n}", ""]);
 
 // exports
 
@@ -7793,7 +7793,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n@keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n.header[data-v-1f42fb90] {\n  width: 100%;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #2e2e2e;\n  color: #fff;\n  transition: 2s;\n}\n.header-wrapper[data-v-1f42fb90] {\n  width: 100%;\n}\n.header--small[data-v-1f42fb90] {\n  height: calc(200px + 10vw);\n}\n@media screen and (min-width: 768px) {\n.header--small[data-v-1f42fb90] {\n    height: 100%;\n    width: 50%;\n    position: fixed;\n    top: 0;\n    left: 0;\n}\n}\n@media screen and (min-width: 1025px) {\n.header--small[data-v-1f42fb90] {\n    width: 512px;\n    left: calc(calc(100% - 1024px) / 2);\n}\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n@keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n.header[data-v-1f42fb90] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #2e2e2e;\n  color: #fff;\n  transition: 2s;\n}\n.header-wrapper[data-v-1f42fb90] {\n  width: 100%;\n}\n.header--small[data-v-1f42fb90] {\n  height: calc(200px + 10vw);\n}\n@media screen and (min-width: 768px) {\n.header--small[data-v-1f42fb90] {\n    height: 100%;\n    width: 50%;\n    position: fixed;\n    top: 0;\n    left: 0;\n}\n}\n@media screen and (min-width: 1025px) {\n.header--small[data-v-1f42fb90] {\n    width: 512px;\n    left: calc(calc(100% - 1024px) / 2);\n}\n}", ""]);
 
 // exports
 
@@ -8002,7 +8002,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@media screen and (min-width: 768px) {\n.main[data-v-6ae91248] {\n    width: 50%;\n    margin-left: 50%;\n}\n}", ""]);
+exports.push([module.i, ".wrapper[data-v-6ae91248] {\n  height: 100%;\n}\n.main[data-v-6ae91248] {\n  background: rgba(224, 224, 224, 0.3);\n}\n@media screen and (min-width: 768px) {\n.main[data-v-6ae91248] {\n    width: 50%;\n    margin-left: 50%;\n}\n}", ""]);
 
 // exports
 

@@ -21,6 +21,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.wrapper {
+  height: 100%;
+}
+
+.main {
+  background: rgba(224, 224, 224, 0.3);
+}
 @media screen and (min-width: 768px) {
   .main {
     width: 50%;
