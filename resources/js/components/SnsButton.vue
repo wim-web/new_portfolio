@@ -28,8 +28,8 @@
 }
 
 .github {
-    color: #fdeb4a;
-    border: solid 2px #fdeb4a;
+    color: #fde509;
+    border: solid 2px #fde509;
 }
 
 .icon {

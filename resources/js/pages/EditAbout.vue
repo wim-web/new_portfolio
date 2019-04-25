@@ -30,10 +30,10 @@
                 </template>
             <form class="skills__item" @submit.prevent="registerSkill">
                 <p class="skills__item--inner">
-                <input type="text" v-model="skill.skill">
+                <input type="text" v-model="skill.skill" required>
                 </p>
                 <p class="skills__item--inner">
-                <select v-model="skill.category">
+                <select v-model="skill.category" required>
                     <option value="front">Front</option>
                     <option value="back">Back</option>
                     <option value="others">Others</option>

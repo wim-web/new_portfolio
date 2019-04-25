@@ -66,6 +66,8 @@ a {
 
 .edit-wrapper {
     font-family: "Kosugi Maru";
+    background-color: rgba(182, 182, 182, 0.2);
+    min-height: 100%;
 }
 
 .tab {

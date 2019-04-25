@@ -40,18 +40,18 @@ export default {
 }
 
 .front {
-    color: #67c5ff;
-    border: solid 2px #67c5ff;
+    color: #005d97;
+    border: solid 2px #005d97;
 }
 
 .back {
-    color: #ff67d9;
-    border: solid 2px #ff67d9;
+    color: #ff26c9;
+    border: solid 2px #ff26c9;
 }
 
 .others {
-    color: #67ff88;
-    border: solid 2px #67ff88;
+    color: #19be3d;
+    border: solid 2px #19be3d;
 }
 
 @media screen and (min-width: 768px) {

@@ -2,10 +2,10 @@
     <div>
         <div class="skills__item">
             <p class="skills__item--inner">
-                <input type="text" name="skill" v-model="item.skill">
+                <input type="text" name="skill" v-model="item.skill" required>
             </p>
             <p class="skills__item--inner">
-                <select v-model="item.category">
+                <select v-model="item.category" required>
                     <option value="front">Front</option>
                     <option value="back">Back</option>
                     <option value="others">Others</option>
