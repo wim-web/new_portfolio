@@ -42,7 +42,7 @@ class AboutController extends Controller
         $skill = Skill::find($id);
         $skill->fill($input)->save();
 
-        return $input;
+        return Skill::all();
     }
 
     public function deleteSkill($id)

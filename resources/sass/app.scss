@@ -9,6 +9,8 @@
 //file
 @import 'reset';
 
+
+
 html {
   height: 100%;
 }
@@ -18,7 +20,7 @@ body {
   font: {
     family: "Cute Font";
   }
-  height: 100%;
+  min-height: 100%;
 }
 
 .wrapper {

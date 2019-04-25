@@ -22,15 +22,19 @@ export default {
     methods: {
         changeAll () {
             this.$store.commit('cate/setCate', 'all')
+            this.$emit('close-pop')
         },
         changeFront () {
             this.$store.commit('cate/setCate', 'front')
+            this.$emit('close-pop')
         },
         changeBack () {
             this.$store.commit('cate/setCate', 'back')
+            this.$emit('close-pop')
         },
         changeOthers () {
             this.$store.commit('cate/setCate', 'others')
+            this.$emit('close-pop')
         }
     },
     computed: {
@@ -49,10 +53,10 @@ export default {
         display: inline-block;
         text-decoration: none;
         border-radius: 3px;
-        width: 24%;
+        width: 23%;
         color: grey;
         border: solid 2px grey;
-        font-size: calc(26px + 1vw);
+        font-size: calc(25px + 1vw);
     }
 }
 

@@ -102,6 +102,7 @@ export default {
     width: 80%;
     margin: 0 auto;
     padding: 20px 0;
+    max-width: 400px;
 }
 
 .title {
@@ -115,6 +116,7 @@ export default {
     line-height: calc(30px + 0.5vw);
     letter-spacing: 0.2em;
     color: rgb(46, 46, 46);
+    white-space: pre-line;
 }
 
 .cate-wrap {

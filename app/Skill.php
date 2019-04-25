@@ -8,10 +8,10 @@ class Skill extends Model
 {
     //
     protected $fillable = [
-        'skill', 'percent', 'category',
+        'skill', 'category',
     ];
 
     protected $visible = [
-        'id', 'skill', 'percent', 'category',
+        'id', 'skill', 'category',
     ];
 }

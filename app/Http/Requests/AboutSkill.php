@@ -26,7 +26,6 @@ class AboutSkill extends FormRequest
         return [
             //
             'skill' => 'required|string',
-            'percent' => 'required|integer|min:0|max:100',
             'category' => 'required|string',
         ];
     }

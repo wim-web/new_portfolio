@@ -18,9 +18,9 @@ export default {
 <style lang="scss" scoped>
 .content {
   max-width: 1024px;
+  min-height: 100vh;
   margin: 0 auto;
   background: rgba(224, 224, 224, 0.3);
-  height: 100%;
 }
 </style>
 
