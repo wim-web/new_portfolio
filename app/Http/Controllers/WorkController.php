@@ -42,4 +42,21 @@ class WorkController extends Controller
         }
         return $filename;
     }
+
+    public function delete($id)
+    {
+        \App\Work::find($id)->delete();
+
+        return Work::all();
+    }
+
+    public function update(Request $request, $id)
+    {
+        $work = \App\Work::find($id);
+        $work->fill($request->all())->save();
+        $work->skills()->detach();
+        $work->skills()->attach($request->all()['checkedSkills']);
+        // return \App\Work::all();
+    }
 }
+

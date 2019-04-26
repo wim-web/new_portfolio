@@ -98,7 +98,6 @@ export default {
                 skill: '',
                 category: '',
             })
-            alert('register success')
         },
         Popup (id) {
             this.popup = id

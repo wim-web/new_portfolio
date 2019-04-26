@@ -21,7 +21,7 @@
         <template v-for="skill in this.skills">
             <div class="skill" :key="skill.id">
                 <input class="checkbox" type="checkbox" :id="skill.id" :value="skill.id" v-model="work.checkedSkills">
-                <label class="checklabel" :for="skill.id">{{skill.skill}}</label>
+                <label class="checklabel" :class="skill.category" :for="skill.id">{{skill.skill}}</label>
             </div>
         </template>
         <p class="btn"><Button :value="'submit'">submit</Button></p>
@@ -88,7 +88,13 @@ export default {
 
             alert('success')
             this.$el.querySelector('input[type="file"]').value = null
-            this.work = {}
+            this.work = Object.assign({}, this.work, {
+                title: '',
+                body: '',
+                link: '',
+                thumbnail: '',
+                checkedSkills: [],
+            })
             this.image = null
             this.preview = null
         }
@@ -155,9 +161,19 @@ export default {
     border-radius: 5px;
 }
 
-.checkbox:checked + .checklabel {
-    border: 2px solid #fa56d1;
-    color: #fa56d1;
+.checkbox:checked + .front {
+    color: #005d97;
+    border: solid 2px #005d97;
+}
+
+.checkbox:checked + .back {
+    color: #ff26c9;
+    border: solid 2px #ff26c9;
+}
+
+.checkbox:checked + .others {
+    color: #19be3d;
+    border: solid 2px #19be3d;
 }
 
 .mb-10 {

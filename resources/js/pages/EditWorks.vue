@@ -6,7 +6,7 @@
                 <p class="work__title">{{ work.title }}</p>
                 <img class="work__img" :src="work.thumbnail">
                 <p>
-                    <Button :value="'update'" @click.native="EditWork()">Edit</Button>
+                    <Button :value="'update'" @click.native="EditWork(work.id)">Edit</Button>
                     <Button :value="'delete'" @click.native="DeleteWork(work.id)">Delete</Button>
                 </p>
             </div>
@@ -35,13 +35,14 @@ export default {
         ToRegister () {
             this.$router.push("/edit/works/register")
         },
-        EditWork () {
-            this.$router.push("`/edit/works/${work.id}`")
+        EditWork (id) {
+            this.$router.push(`/edit/works/${id}`)
         },
-        DeleteWork (id) {
+        async DeleteWork (id) {
             const flg = confirm('削除しますか？')
             if (flg) {
-                alert('delete')
+               const response = await axios.delete(`/api/works/${id}`)
+               this.works = response.data
             }
         }
     },
