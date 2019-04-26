@@ -24,3 +24,5 @@ Route::delete('/about/skill/{id}', 'AboutController@deleteSkill');
 // work
 Route::get('/works', 'WorkController@index');
 Route::get('/works/{id}', 'WorkController@show');
+Route::post('/works', 'WorkController@store');
+Route::post('/image', 'WorkController@storeImage');

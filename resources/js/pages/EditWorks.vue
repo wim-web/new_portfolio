@@ -7,7 +7,7 @@
                 <img class="work__img" :src="work.thumbnail">
                 <p>
                     <Button :value="'update'" @click.native="EditWork()">Edit</Button>
-                    <Button :value="'delete'" @click.native="DeleteWork()">Delete</Button>
+                    <Button :value="'delete'" @click.native="DeleteWork(work.id)">Delete</Button>
                 </p>
             </div>
         </template>
@@ -38,8 +38,11 @@ export default {
         EditWork () {
             this.$router.push("`/edit/works/${work.id}`")
         },
-        DeleteWork () {
-
+        DeleteWork (id) {
+            const flg = confirm('削除しますか？')
+            if (flg) {
+                alert('delete')
+            }
         }
     },
     created() {
