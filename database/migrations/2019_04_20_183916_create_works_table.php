@@ -18,7 +18,7 @@ class CreateWorksTable extends Migration
             $table->string('title');
             $table->text('body');
             $table->string('link')->nullable();
-            $table->string('thumbnail')->nullable();
+            $table->text('thumbnail')->nullable();
             $table->timestamps();
         });
     }

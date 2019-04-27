@@ -69,6 +69,7 @@ export default {
 
             reader.onload = e => {
                 this.preview = e.target.result
+                this.work.thumbnail = e.target.result
                 
             }
             
@@ -77,14 +78,14 @@ export default {
             this.image = event.target.files[0]
         },
         async registerWork () {
-            const data = new FormData()
-            data.append('image', this.image)
-            data.append('title', this.work.title)
+            // const data = new FormData()
+            // data.append('image', this.image)
+            // data.append('title', this.work.title)
             
-            let response = await axios.post('/api/image', data)
-            const file = response.data
-            this.$set(this.work, 'thumbnail', '/storage/works/' + file)
-            response = await axios.post('/api/works', this.work)
+            // let response = await axios.post('/api/image', data)
+            // const file = response.data
+            // this.$set(this.work, 'thumbnail', '/storage/works/' + file)
+            const response = await axios.post('/api/works', this.work)
 
             alert('success')
             this.$el.querySelector('input[type="file"]').value = null

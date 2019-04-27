@@ -3154,6 +3154,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       reader.onload = function (e) {
         _this.preview = e.target.result;
+        _this.work.thumbnail = e.target.result;
       };
 
       reader.readAsDataURL(event.target.files[0]);
@@ -3163,25 +3164,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var _registerWork = _asyncToGenerator(
       /*#__PURE__*/
       _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
-        var data, response, file;
+        var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                data = new FormData();
-                data.append('image', this.image);
-                data.append('title', this.work.title);
-                _context2.next = 5;
-                return axios.post('/api/image', data);
-
-              case 5:
-                response = _context2.sent;
-                file = response.data;
-                this.$set(this.work, 'thumbnail', '/storage/works/' + file);
-                _context2.next = 10;
+                _context2.next = 2;
                 return axios.post('/api/works', this.work);
 
-              case 10:
+              case 2:
                 response = _context2.sent;
                 alert('success');
                 this.$el.querySelector('input[type="file"]').value = null;
@@ -3195,7 +3186,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 this.image = null;
                 this.preview = null;
 
-              case 16:
+              case 8:
               case "end":
                 return _context2.stop();
             }
