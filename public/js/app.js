@@ -3213,10 +3213,45 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      opened: false
+    };
+  },
   components: {
     Header: _components_Header__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  methods: {
+    toggle: function toggle() {
+      this.opened = !this.opened;
+    },
+    toTop: function toTop() {
+      this.$store.dispatch('header/resetState');
+      this.$router.push('/');
+      this.opened = false;
+    },
+    toAbout: function toAbout() {
+      this.$router.push('/about');
+      this.opened = false;
+    },
+    toWorks: function toWorks() {
+      this.$router.push('/works');
+      this.opened = false;
+    }
   }
 });
 
@@ -7953,7 +7988,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n@keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n.header[data-v-1f42fb90] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #2e2e2e;\n  color: #fff;\n  transition: 2s;\n}\n.header-wrapper[data-v-1f42fb90] {\n  width: 100%;\n}\n.header--small[data-v-1f42fb90] {\n  height: calc(200px + 10vw);\n}\n@media screen and (min-width: 768px) {\n.header--small[data-v-1f42fb90] {\n    height: 100%;\n    width: 50%;\n    position: fixed;\n    top: 0;\n    left: 0;\n}\n}\n@media screen and (min-width: 1025px) {\n.header--small[data-v-1f42fb90] {\n    width: 512px;\n    left: calc(calc(100% - 1024px) / 2);\n}\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n@keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n.header[data-v-1f42fb90] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #2e2e2e;\n  color: #fff;\n  transition: 2s;\n}\n.header-wrapper[data-v-1f42fb90] {\n  width: 100%;\n  text-align: center;\n}\n.header--small[data-v-1f42fb90] {\n  height: calc(200px + 10vw);\n}\n@media screen and (min-width: 768px) {\n.header--small[data-v-1f42fb90] {\n    height: 100%;\n    width: 50%;\n    position: fixed;\n    top: 0;\n    left: 0;\n}\n.header__menu[data-v-1f42fb90] {\n    font-size: 55px;\n    padding: 15px 10px;\n}\n}\n@media screen and (min-width: 1025px) {\n.header--small[data-v-1f42fb90] {\n    width: 512px;\n    left: calc(calc(100% - 1024px) / 2);\n}\n}", ""]);
 
 // exports
 
@@ -8048,7 +8083,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".sns[data-v-0fd90bef] {\n  display: block;\n  padding: 0.2em 1em;\n  text-decoration: none;\n  border-radius: 3px;\n  font-size: calc(26px + 1vw);\n  margin-bottom: 5px;\n}\n.sns-wrap[data-v-0fd90bef] {\n  padding: 10px;\n}\n.twitter[data-v-0fd90bef] {\n  color: #67c5ff;\n  border: solid 2px #67c5ff;\n}\n.github[data-v-0fd90bef] {\n  color: #fde509;\n  border: solid 2px #fde509;\n}\n.icon[data-v-0fd90bef] {\n  font-size: calc(18px + 1vw);\n}\n@media screen and (min-width: 768px) {\n.sns[data-v-0fd90bef] {\n    font-size: 34px;\n    margin-bottom: 10px;\n    transition: 0.5s;\n}\n.twitter[data-v-0fd90bef]:hover {\n    background-color: #67c5ff;\n    color: #fff;\n}\n.github[data-v-0fd90bef]:hover {\n    background-color: #fdeb4a;\n    color: #fff;\n}\n.icon[data-v-0fd90bef] {\n    font-size: 25px;\n}\n}", ""]);
+exports.push([module.i, ".sns[data-v-0fd90bef] {\n  display: block;\n  padding: 0.2em 1em;\n  text-decoration: none;\n  border-radius: 3px;\n  font-size: calc(26px + 1vw);\n  margin-bottom: 5px;\n}\n.sns-wrap[data-v-0fd90bef] {\n  padding: 10px;\n}\n.twitter[data-v-0fd90bef] {\n  color: #67c5ff;\n  border: solid 2px #67c5ff;\n}\n.github[data-v-0fd90bef] {\n  color: #fde509;\n  border: solid 2px #fde509;\n}\n.icon[data-v-0fd90bef] {\n  font-size: calc(18px + 1vw);\n}\n@media screen and (min-width: 768px) {\n.sns[data-v-0fd90bef] {\n    font-size: 34px;\n    margin-bottom: 10px;\n    transition: 0.5s;\n}\n.twitter[data-v-0fd90bef]:hover {\n    background-color: #67c5ff;\n    color: #fff;\n}\n.github[data-v-0fd90bef]:hover {\n    background-color: #fde509;\n    color: #fff;\n}\n.icon[data-v-0fd90bef] {\n    font-size: 25px;\n}\n}", ""]);
 
 // exports
 
@@ -8219,7 +8254,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".wrapper[data-v-6ae91248] {\n  height: 100%;\n}\n.main[data-v-6ae91248] {\n  background: rgba(224, 224, 224, 0.3);\n}\n@media screen and (min-width: 768px) {\n.main[data-v-6ae91248] {\n    width: 50%;\n    margin-left: 50%;\n}\n}", ""]);
+exports.push([module.i, ".menu__link[data-v-6ae91248] {\n  text-decoration: none;\n  color: #fff;\n  cursor: pointer;\n}\n.wrapper[data-v-6ae91248] {\n  height: 100%;\n}\n.main[data-v-6ae91248] {\n  background: rgba(224, 224, 224, 0.3);\n}\n.btn[data-v-6ae91248] {\n  border-radius: 50%;\n  background-color: rgba(187, 187, 187, 0.767);\n  height: 50px;\n  width: 50px;\n  margin-top: 20px;\n  position: fixed;\n  bottom: 15px;\n  right: 15px;\n  transition: 0.5s;\n  z-index: 100;\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);\n}\n.btn--close[data-v-6ae91248] {\n  -webkit-transform: rotate(90deg);\n          transform: rotate(90deg);\n}\n.layer[data-v-6ae91248] {\n  height: 100%;\n  width: 100%;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: rgba(46, 46, 46, 0.75);\n  z-index: 99;\n}\n.menu[data-v-6ae91248] {\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate3d(-50%, -50%, 0);\n          transform: translate3d(-50%, -50%, 0);\n  border: 1px solid #fff;\n  text-align: center;\n  border-radius: 5px;\n  padding: 10px;\n  width: 60%;\n  margin: 0 auto;\n  max-width: 350px;\n  font-size: calc(30px + 2.5vw);\n}\n.icon[data-v-6ae91248] {\n  font-size: 20px;\n  color: #fff;\n}\n@media screen and (min-width: 768px) {\n.main[data-v-6ae91248] {\n    width: 50%;\n    margin-left: 50%;\n}\n.btn[data-v-6ae91248] {\n    display: none;\n}\n}", ""]);
 
 // exports
 
@@ -42800,7 +42835,72 @@ var render = function() {
           )
         ],
         1
-      )
+      ),
+      _vm._v(" "),
+      _c(
+        "transition",
+        {
+          attrs: {
+            "enter-active-class": "animated fadeIn",
+            "leave-active-class": "animated fadeOut"
+          }
+        },
+        [
+          _c(
+            "div",
+            {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: _vm.opened,
+                  expression: "opened"
+                }
+              ],
+              staticClass: "layer"
+            },
+            [
+              _c("div", { staticClass: "menu" }, [
+                _c("p", [
+                  _c(
+                    "a",
+                    { staticClass: "menu__link", on: { click: _vm.toTop } },
+                    [_vm._v("TOP")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _c(
+                    "a",
+                    { staticClass: "menu__link", on: { click: _vm.toAbout } },
+                    [_vm._v("ABOUT")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _c(
+                    "a",
+                    { staticClass: "menu__link", on: { click: _vm.toWorks } },
+                    [_vm._v("WORKS")]
+                  )
+                ])
+              ])
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      this.$store.state.header.isSmall
+        ? _c(
+            "button",
+            {
+              staticClass: "btn",
+              class: { "btn--close": _vm.opened },
+              on: { click: _vm.toggle }
+            },
+            [_c("i", { staticClass: "fas fa-bars icon" })]
+          )
+        : _vm._e()
     ],
     1
   )

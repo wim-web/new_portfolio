@@ -15,7 +15,6 @@ import InputLink from './InputLink'
 export default {
     data () {
         return {
-           
         }
     },
     components: {
@@ -45,6 +44,7 @@ export default {
 
     &-wrapper {
         width: 100%;
+        text-align: center;
     }
     
     &--small {
@@ -60,6 +60,11 @@ export default {
             position: fixed;
             top: 0;
             left: 0;
+        }
+
+        &__menu {
+            font-size: 55px;
+            padding: 15px 10px;
         }
     }
 }

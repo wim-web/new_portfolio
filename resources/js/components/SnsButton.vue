@@ -49,7 +49,7 @@
     }
 
     .github:hover {
-        background-color: #fdeb4a;
+        background-color: #fde509;
         color: #fff;
     }
 
