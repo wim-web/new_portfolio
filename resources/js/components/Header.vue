@@ -3,7 +3,20 @@
         class="header"
         :class="{ 'header--small': isSmall }">
         <div class="header-wrapper">
-            <InputLink />
+            <!-- <InputLink /> -->
+            <p>
+                <a @click="toTop" class="link link--active">Welcome</a>
+            </p>
+            <router-link to="/about"
+                class="link"
+                :class="{'link--active': isAbout}">
+                About
+            </router-link>
+            <router-link to="/works"
+                class="link"
+                :class="{'link--active': isWork}">
+                Works
+            </router-link>
         </div>
     </header>
 </template>
@@ -20,9 +33,21 @@ export default {
     components: {
         InputLink,
     },
+    methods: {
+        toTop() {
+            this.$store.dispatch('header/resetState')
+            this.$router.push('/')
+        }
+    },
     computed: {
         isSmall () {
             return this.$store.state.header.isSmall
+        },
+        isWork () {
+            return this.$store.state.header.isWork
+        },
+        isAbout () {
+            return this.$store.state.header.isAbout
         }
     }
 }
@@ -48,7 +73,24 @@ export default {
     }
     
     &--small {
-        height: calc(200px + 10vw);
+        height: calc(150px + 10vw);
+    }
+}
+
+.title {
+    font-size: 60px;
+}
+
+.link {
+    display: inline-block;
+    font-size: calc(42px + 2.5vw);
+    text-decoration: none;
+    color: gray;
+    padding: 0 10px;
+    transition: .3s;
+    cursor: pointer;
+    &--active {
+        color: #fff;
     }
 }
 
@@ -66,6 +108,9 @@ export default {
             font-size: 55px;
             padding: 15px 10px;
         }
+    }
+    .link {
+        font-size: 60px;
     }
 }
 @media screen and (min-width: $pc) {

@@ -66,10 +66,10 @@ export default {
     },
     beforeCreate() {
         this.$store.commit('cate/resetCate')
+        this.$store.commit('header/isWork')
     },
     created() {
-        this.$store.dispatch('header/setIsSmall', true)
-        this.$store.dispatch('header/setHeaderPlaceHolder', 'about OR works')
+        this.$store.commit('header/setIsSmall', true)
         this.getWork()
     },
 }

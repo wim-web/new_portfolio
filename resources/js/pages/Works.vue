@@ -38,12 +38,11 @@ export default {
             return this.$store.state.loading.loading
         }
     },
-    beforeCreate () {
-        
+    beforeCreate() {
+        this.$store.commit('header/isWork')
     },
     created: function () {
-        this.$store.dispatch('header/setIsSmall', true)
-        this.$store.dispatch('header/setHeaderPlaceHolder', 'Enter top OR about')
+        this.$store.commit('header/setIsSmall', true)
         this.getWorks()
         
     },

@@ -66,12 +66,12 @@ export default {
         }
     },
     beforeCreate() {
+        this.$store.commit('header/isAbout')
         this.$store.commit('cate/resetCate')
     },
     created: function () {
         this.$store.commit('cate/resetCate')
-        this.$store.dispatch('header/setIsSmall', true)
-        this.$store.dispatch('header/setHeaderPlaceHolder', 'Enter top OR works')
+        this.$store.commit('header/setIsSmall', true)
         this.getAbout()
     },
 }

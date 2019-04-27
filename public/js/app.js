@@ -1891,6 +1891,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -1899,9 +1912,21 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     InputLink: _InputLink__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
+  methods: {
+    toTop: function toTop() {
+      this.$store.dispatch('header/resetState');
+      this.$router.push('/');
+    }
+  },
   computed: {
     isSmall: function isSmall() {
       return this.$store.state.header.isSmall;
+    },
+    isWork: function isWork() {
+      return this.$store.state.header.isWork;
+    },
+    isAbout: function isAbout() {
+      return this.$store.state.header.isAbout;
     }
   }
 });
@@ -2257,12 +2282,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   beforeCreate: function beforeCreate() {
+    this.$store.commit('header/isAbout');
     this.$store.commit('cate/resetCate');
   },
   created: function created() {
     this.$store.commit('cate/resetCate');
-    this.$store.dispatch('header/setIsSmall', true);
-    this.$store.dispatch('header/setHeaderPlaceHolder', 'Enter top OR works');
+    this.$store.commit('header/setIsSmall', true);
     this.getAbout();
   }
 });
@@ -3370,10 +3395,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   beforeCreate: function beforeCreate() {
     this.$store.commit('cate/resetCate');
+    this.$store.commit('header/isWork');
   },
   created: function created() {
-    this.$store.dispatch('header/setIsSmall', true);
-    this.$store.dispatch('header/setHeaderPlaceHolder', 'about OR works');
+    this.$store.commit('header/setIsSmall', true);
     this.getWork();
   }
 });
@@ -3464,10 +3489,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       return this.$store.state.loading.loading;
     }
   },
-  beforeCreate: function beforeCreate() {},
+  beforeCreate: function beforeCreate() {
+    this.$store.commit('header/isWork');
+  },
   created: function created() {
-    this.$store.dispatch('header/setIsSmall', true);
-    this.$store.dispatch('header/setHeaderPlaceHolder', 'Enter top OR about');
+    this.$store.commit('header/setIsSmall', true);
     this.getWorks();
   }
 });
@@ -7988,7 +8014,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n@keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n.header[data-v-1f42fb90] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #2e2e2e;\n  color: #fff;\n  transition: 2s;\n}\n.header-wrapper[data-v-1f42fb90] {\n  width: 100%;\n  text-align: center;\n}\n.header--small[data-v-1f42fb90] {\n  height: calc(200px + 10vw);\n}\n@media screen and (min-width: 768px) {\n.header--small[data-v-1f42fb90] {\n    height: 100%;\n    width: 50%;\n    position: fixed;\n    top: 0;\n    left: 0;\n}\n.header__menu[data-v-1f42fb90] {\n    font-size: 55px;\n    padding: 15px 10px;\n}\n}\n@media screen and (min-width: 1025px) {\n.header--small[data-v-1f42fb90] {\n    width: 512px;\n    left: calc(calc(100% - 1024px) / 2);\n}\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n@keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n.header[data-v-1f42fb90] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #2e2e2e;\n  color: #fff;\n  transition: 2s;\n}\n.header-wrapper[data-v-1f42fb90] {\n  width: 100%;\n  text-align: center;\n}\n.header--small[data-v-1f42fb90] {\n  height: calc(150px + 10vw);\n}\n.title[data-v-1f42fb90] {\n  font-size: 60px;\n}\n.link[data-v-1f42fb90] {\n  display: inline-block;\n  font-size: calc(42px + 2.5vw);\n  text-decoration: none;\n  color: gray;\n  padding: 0 10px;\n  transition: 0.3s;\n  cursor: pointer;\n}\n.link--active[data-v-1f42fb90] {\n  color: #fff;\n}\n@media screen and (min-width: 768px) {\n.header--small[data-v-1f42fb90] {\n    height: 100%;\n    width: 50%;\n    position: fixed;\n    top: 0;\n    left: 0;\n}\n.header__menu[data-v-1f42fb90] {\n    font-size: 55px;\n    padding: 15px 10px;\n}\n.link[data-v-1f42fb90] {\n    font-size: 60px;\n}\n}\n@media screen and (min-width: 1025px) {\n.header--small[data-v-1f42fb90] {\n    width: 512px;\n    left: calc(calc(100% - 1024px) / 2);\n}\n}", ""]);
 
 // exports
 
@@ -41275,7 +41301,42 @@ var render = function() {
   return _c(
     "header",
     { staticClass: "header", class: { "header--small": _vm.isSmall } },
-    [_c("div", { staticClass: "header-wrapper" }, [_c("InputLink")], 1)]
+    [
+      _c(
+        "div",
+        { staticClass: "header-wrapper" },
+        [
+          _c("p", [
+            _c(
+              "a",
+              { staticClass: "link link--active", on: { click: _vm.toTop } },
+              [_vm._v("Welcome")]
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            {
+              staticClass: "link",
+              class: { "link--active": _vm.isAbout },
+              attrs: { to: "/about" }
+            },
+            [_vm._v("\n            About\n        ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            {
+              staticClass: "link",
+              class: { "link--active": _vm.isWork },
+              attrs: { to: "/works" }
+            },
+            [_vm._v("\n            Works\n        ")]
+          )
+        ],
+        1
+      )
+    ]
   )
 }
 var staticRenderFns = []
@@ -60743,23 +60804,14 @@ var routes = [{
   component: _pages_Top__WEBPACK_IMPORTED_MODULE_3__["default"],
   children: [{
     path: 'works',
-    component: _pages_Works__WEBPACK_IMPORTED_MODULE_5__["default"],
-    meta: {
-      title: 'Works'
-    }
+    component: _pages_Works__WEBPACK_IMPORTED_MODULE_5__["default"]
   }, {
     path: 'about',
-    component: _pages_About__WEBPACK_IMPORTED_MODULE_4__["default"],
-    meta: {
-      title: 'About'
-    }
+    component: _pages_About__WEBPACK_IMPORTED_MODULE_4__["default"]
   }, {
     path: 'works/:id',
     component: _pages_WorkDetail__WEBPACK_IMPORTED_MODULE_6__["default"],
-    props: true,
-    meta: {
-      title: 'Detail'
-    }
+    props: true
   }]
 }, {
   path: '/login',
@@ -60807,11 +60859,6 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   }
 });
 /* harmony default export */ __webpack_exports__["default"] = (router);
-router.afterEach(function (to, from) {
-  if (to.meta && to.meta.title) {
-    _store_index__WEBPACK_IMPORTED_MODULE_2__["default"].dispatch('header/setHeaderText', to.meta.title);
-  }
-});
 
 /***/ }),
 
@@ -60907,40 +60954,33 @@ var mutations = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var state = {
-  headerText: 'Enter about OR works',
   isSmall: false,
-  headerPlaceHolder: 'Enter about OR works'
+  isWork: true,
+  isAbout: true
 };
 var getters = {};
 var mutations = {
-  setHeaderText: function setHeaderText(state, headerText) {
-    state.headerText = headerText;
-  },
   setIsSmall: function setIsSmall(state, bool) {
     state.isSmall = bool;
   },
-  setHeaderPlaceHolder: function setHeaderPlaceHolder(state, text) {
-    state.headerPlaceHolder = text;
+  isWork: function isWork(state) {
+    state.isWork = true;
+    state.isAbout = false;
+  },
+  isAbout: function isAbout(state) {
+    state.isWork = false;
+    state.isAbout = true;
+  },
+  resetState: function resetState(state) {
+    state.isSmall = false;
+    state.isAbout = true;
+    state.isWork = true;
   }
 };
 var actions = {
-  setHeaderText: function setHeaderText(_ref, headerText) {
+  resetState: function resetState(_ref) {
     var commit = _ref.commit;
-    commit('setHeaderText', headerText);
-  },
-  setIsSmall: function setIsSmall(_ref2, bool) {
-    var commit = _ref2.commit;
-    commit('setIsSmall', bool);
-  },
-  setHeaderPlaceHolder: function setHeaderPlaceHolder(_ref3, text) {
-    var commit = _ref3.commit;
-    commit('setHeaderPlaceHolder', text);
-  },
-  resetState: function resetState(_ref4) {
-    var commit = _ref4.commit;
-    commit('setHeaderText', 'Enter about OR works');
-    commit('setIsSmall', false);
-    commit('setHeaderPlaceHolder', 'Enter about OR works');
+    commit('resetState');
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = ({

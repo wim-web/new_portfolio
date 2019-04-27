@@ -25,24 +25,15 @@ const routes = [
             {
                 path: 'works',
                 component: Works,
-                meta: {
-                    title: 'Works',
-                },
             },
             {
                 path: 'about',
                 component: About,
-                meta: {
-                    title: 'About',
-                },
             },
             {
                 path: 'works/:id',
                 component: WorkDetail,
                 props: true,
-                meta: {
-                    title: 'Detail'
-                }
             }
         ]
     },
@@ -101,9 +92,3 @@ const router = new VueRouter({
 })
 
 export default router
-
-router.afterEach((to, from) => {
-    if (to.meta && to.meta.title){
-        store.dispatch('header/setHeaderText', to.meta.title)
-    }
-})
