@@ -19,8 +19,8 @@ Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/about', 'AboutController@index')->name('about.index');
 Route::put('/about/desc', 'AboutController@updateDesc');
 Route::post('/about/skill', 'AboutController@registerSkill');
-Route::put('/about/skill/{id}', 'AboutController@updateSkill');
-Route::delete('/about/skill/{id}', 'AboutController@deleteSkill');
+Route::put('/about/skill/{skill}', 'AboutController@updateSkill');
+Route::delete('/about/skill/{skill}', 'AboutController@deleteSkill');
 // work
 Route::get('/works', 'WorkController@index');
 Route::get('/works/{id}', 'WorkController@show');

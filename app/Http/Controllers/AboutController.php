@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\User;
 use App\Skill;
 use App\Http\Requests\AboutDesc;
@@ -10,19 +9,28 @@ use App\Http\Requests\AboutSkill;
 
 class AboutController extends Controller
 {
-    //
+
+    private $user;
+    private $skill;
+
+    public function __construct(User $user, Skill $skill)
+    {
+        $this->user = $user;
+        $this->skill = $skill;
+    }
+
     public function index()
     {
-        $user = User::first();
-        $skill =  Skill::all();
+        $me = $this->user->first();
+        $mySkills =  $this->skill->all();
 
-        return ['user' => $user, 'skill' => $skill];
+        return ['user' => $me, 'skill' => $mySkills];
     }
 
     public function updateDesc(AboutDesc $request)
     {
         $input = $request->all();
-        $user = User::first();
+        $user = $this->user->first();
         $user->fill($input)->save();
 
         return $user;
@@ -31,24 +39,23 @@ class AboutController extends Controller
     public function registerSkill(AboutSkill $request)
     {
         $input = $request->all();
-        $skill = new Skill();
-        $skill->create($input);
-        return Skill::all();
+        $this->skill->fill($input)->save();
+
+        return $this->skill->all();
     }
 
-    public function updateSkill(AboutSkill $request, $id)
+    public function updateSkill(AboutSkill $request, Skill $skill)
     {
         $input = $request->all();
-        $skill = Skill::find($id);
         $skill->fill($input)->save();
 
-        return Skill::all();
+        return $this->skill->all();
     }
 
-    public function deleteSkill($id)
+    public function deleteSkill(Skill $skill)
     {
-        $skill = Skill::find($id);
         $skill->delete();
-        return Skill::all();
+
+        return $this->skill->all();
     }
 }
