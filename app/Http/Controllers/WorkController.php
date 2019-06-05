@@ -31,6 +31,7 @@ class WorkController extends Controller
         $input = $request->all();
         $this->work->fill($input)->save();
         $this->work->skills()->attach($input['checkedSkills']);
+        return;
     }
     
     public function storeImage(Request $request)
