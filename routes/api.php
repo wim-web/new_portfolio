@@ -23,8 +23,8 @@ Route::put('/about/skill/{skill}', 'AboutController@updateSkill');
 Route::delete('/about/skill/{skill}', 'AboutController@deleteSkill');
 // work
 Route::get('/works', 'WorkController@index');
-Route::get('/works/{id}', 'WorkController@show');
+Route::get('/works/{work}', 'WorkController@show');
 Route::post('/works', 'WorkController@store');
 Route::post('/image', 'WorkController@storeImage');
-Route::delete('/works/{id}', 'WorkController@delete');
-Route::put('/works/{id}', 'WorkController@update');
+Route::delete('/works/{work}', 'WorkController@delete');
+Route::put('/works/{work}', 'WorkController@update');

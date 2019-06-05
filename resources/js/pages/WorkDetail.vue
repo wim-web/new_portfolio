@@ -52,7 +52,7 @@ export default {
         async getWork () {
             this.$store.commit('loading/setLoading', true)
             const response = await axios.get(`/api/works/${this.id}`)
-            this.work = response.data[0]
+            this.work = response.data
             this.$store.commit('loading/setLoading', false)
         },
     },
@@ -153,9 +153,6 @@ export default {
     title {
         &__text {
             font-size: 52px;
-        }
-        &__link {
-
         }
     }
 

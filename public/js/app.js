@@ -2730,7 +2730,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 7:
                 response = _context.sent;
-                data = response.data[0];
+                data = response.data;
                 checkedSkill = [];
 
                 for (i = 0; i < data.skills.length; i++) {
@@ -3358,7 +3358,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 3:
                 response = _context.sent;
-                this.work = response.data[0];
+                this.work = response.data;
                 this.$store.commit('loading/setLoading', false);
 
               case 6:

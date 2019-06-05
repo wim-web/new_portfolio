@@ -55,7 +55,7 @@ export default {
             this.skills = skills
             response = await axios.get(`/api/works/${this.id}`)
             
-            const data = response.data[0]
+            const data = response.data
             let checkedSkill = []
             for (let i = 0; i < data.skills.length; i++) {
                 checkedSkill[i] = data.skills[i].id

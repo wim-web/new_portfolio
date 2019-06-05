@@ -7,29 +7,30 @@ use App\Work;
 
 class WorkController extends Controller
 {
-    //
-    public function index()
+    private $work;
+
+    public function __construct(Work $work)
     {
-        $works = \App\Work::all();
-        return $works;
+        $this->work = $work;
     }
 
-    public function show($id)
+    public function index()
     {
-        $work = Work::where('id', $id)->with(['skills'])->get();
+        return $this->work->all();
+    }
 
-        return $work;
+    public function show(Work $work)
+    {
+        $workWithSkills = $work->load('skills');
+
+        return $workWithSkills;
     }
 
     public function store(Request $request)
     {
         $input = $request->all();
-        $work = new \App\Work();
-
-        $work->fill($input)->save();
-        $work->skills()->attach($input['checkedSkills']);
-
-        return;
+        $this->work->fill($input)->save();
+        $this->work->skills()->attach($input['checkedSkills']);
     }
     
     public function storeImage(Request $request)
@@ -37,26 +38,31 @@ class WorkController extends Controller
         $image = $request->image;
         $title = $request->title;
         $filename = $title . '.' . $image->extension();
-        if ($image->isValid()) {
-            $image->storeAs('works', $filename, 'public');
-        }
-        return $filename;
+        
+        return storeImageToStorage($filename, $image) ? $filename : null;
     }
 
-    public function delete($id)
+    public function storeImageToStorage(String $filename, String $image) :bool
     {
-        \App\Work::find($id)->delete();
-
-        return Work::all();
+        if (!$image->isValid()) return false;
+            
+        $image->storeAs('works', $filename, 'public');
+        return true;
     }
 
-    public function update(Request $request, $id)
+    public function delete(Work $work)
     {
-        $work = \App\Work::find($id);
-        $work->fill($request->all())->save();
+        $work->delete();
+
+        return $this->work->all();
+    }
+
+    public function update(Request $request, Work $work)
+    {
+        $input = $request->all();
+        $work->fill($input)->save();
         $work->skills()->detach();
-        $work->skills()->attach($request->all()['checkedSkills']);
-        // return \App\Work::all();
+        $work->skills()->attach($input['checkedSkills']);
     }
 }
 
