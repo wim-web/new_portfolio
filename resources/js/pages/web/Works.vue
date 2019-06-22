@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import Work from '../components/Work'
-import Loading from '../components/Loading'
+import Work from '../../components/Work'
+import Loading from '../../components/Loading'
 export default {
     data () {
         return {

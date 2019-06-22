@@ -62,7 +62,7 @@ export default {
 <style lang="scss" scoped>
 
 
-@import '../../sass/_variables';
+@import '../../../sass/_variables';
 
 .login-form-wrap {
   position: absolute;

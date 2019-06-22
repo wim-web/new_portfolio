@@ -27,10 +27,10 @@
 </template>
 
 <script>
-import Skill from '../components/Skill'
-import CateBtn from '../components/CateBtn'
-import SnsBtn from '../components/SnsButton'
-import Loading from '../components/Loading'
+import Skill from '../../components/Skill'
+import CateBtn from '../../components/CateBtn'
+import SnsBtn from '../../components/SnsButton'
+import Loading from '../../components/Loading'
 export default {
     data () {
         return {

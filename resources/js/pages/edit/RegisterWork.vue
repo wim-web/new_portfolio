@@ -1,5 +1,5 @@
 <template>
-    <form class="wrapper" @submit.prevent="updateWork()">
+    <form class="wrapper" @submit.prevent="registerWork()">
         <div class="title mb-10">
             <p class="text"><label for="title">title</label></p>
             <input class="input" type="text" id="title" v-model="work.title" required>
@@ -8,12 +8,12 @@
             <p class="text"><label for="link">link</label></p>
             <input class="input" type="url" id="link" v-model="work.link">
         </div>
-        <!-- <div class="file mb-10">
+        <div class="file mb-10">
             <input type="file" @change="onFileChange" required>
             <output v-if="preview">
                 <img class="file__image" :src="preview" alt="">
             </output>
-        </div> -->
+        </div>
         <div class="body mb-10">
             <p class="text"><label for="body">body</label></p>
             <textarea class="body__text input" type="text" id="body" v-model="work.body" required rows="10"></textarea>
@@ -30,53 +30,78 @@
 </template>
 
 <script>
-import Button from '../components/Button'
+import Button from '../../components/Button'
 export default {
     data () {
         return {
-            work: {},
+            work: {
+                title: '',
+                body: '',
+                link: '',
+                thumbnail: '',
+                checkedSkills: [],
+            },
             skills: [],
-
-        }
-    },
-    props: {
-        id: {
-            type: String,
-            required: true,
+            preview: null,
+            image: null,
+            
         }
     },
     components: {
         Button,
     },
     methods: {
-        async getWork () {
-            let response = await axios.get('/api/about')
+        async getSkills () {
+            const response = await axios.get('/api/about')
             const skills = response.data['skill']
             this.skills = skills
-            response = await axios.get(`/api/works/${this.id}`)
-            
-            const data = response.data
-            let checkedSkill = []
-            for (let i = 0; i < data.skills.length; i++) {
-                checkedSkill[i] = data.skills[i].id
-            }
-            const work = {
-                id: data.id,
-                title: data.title,
-                body: data.body,
-                thumbnail: data.thumbnail,
-                link: data.link,
-                checkedSkills: checkedSkill,
-            }
-            this.work = Object.assign({}, this.work, work)
         },
-        async updateWork () {
-            const response = await axios.put(`/api/works/${this.work.id}`, this.work)
+        onFileChange (event) {
+            if (event.target.files.length === 0) {
+                return false
+            }
+            
+            if (! event.target.files[0].type.match('image.*')) {
+                return false
+            }
+
+            const reader = new FileReader()
+
+            reader.onload = e => {
+                this.preview = e.target.result
+                this.work.thumbnail = e.target.result
+                
+            }
+            
+            reader.readAsDataURL(event.target.files[0])
+
+            this.image = event.target.files[0]
+        },
+        async registerWork () {
+            // const data = new FormData()
+            // data.append('image', this.image)
+            // data.append('title', this.work.title)
+            
+            // let response = await axios.post('/api/image', data)
+            // const file = response.data
+            // this.$set(this.work, 'thumbnail', '/storage/works/' + file)
+            const response = await axios.post('/api/works', this.work)
+
             alert('success')
+            this.$el.querySelector('input[type="file"]').value = null
+            this.work = Object.assign({}, this.work, {
+                title: '',
+                body: '',
+                link: '',
+                thumbnail: '',
+                checkedSkills: [],
+            })
+            this.image = null
+            this.preview = null
         }
     },
     created () {
-        this.getWork()
+        this.getSkills()
     }
 }
 </script>

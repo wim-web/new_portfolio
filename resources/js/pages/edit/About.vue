@@ -26,7 +26,7 @@
                             <Button @click.native="deleteSkill(skill.id)" :value="'delete'">delete</Button>
                         </p>
                     </div>
-                    <Popup :skill="skill" v-show="popup === skill.id" @close-pop="closePop" @update-skill="updateSkill"/>
+                    <Popup :skill="skill" v-show="popup === skill.id" :key="skill.id" @close-pop="closePop" @update-skill="updateSkill"/>
                 </template>
             <form class="skills__item" @submit.prevent="registerSkill">
                 <p class="skills__item--inner">
@@ -51,9 +51,9 @@
 </template>
 
 <script>
-import Button from '../components/Button'
-import CateBtn from '../components/CateBtn'
-import Popup from '../components/PopupForm'
+import Button from '../../components/Button'
+import CateBtn from '../../components/CateBtn'
+import Popup from '../../components/PopupForm'
 export default {
     data () {
         return {

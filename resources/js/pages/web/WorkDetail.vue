@@ -29,9 +29,9 @@
 </template>
 
 <script>
-import Skill from '../components/Skill'
-import CateBtn from '../components/CateBtn'
-import Loading from '../components/Loading'
+import Skill from '../../components/Skill'
+import CateBtn from '../../components/CateBtn'
+import Loading from '../../components/Loading'
 export default {
     props: {
         id: {

@@ -3,17 +3,19 @@ import VueRouter from 'vue-router'
 
 import store from './store/index'
 
-import Top from './pages/Top'
-import About from './pages/About'
-import Works from './pages/Works'
-import WorkDetail from './pages/WorkDetail'
+/* web */
+import Top from './pages/web/Top'
+import About from './pages/web/About'
+import Works from './pages/web/Works'
+import WorkDetail from './pages/web/WorkDetail'
+import Login from './pages/web/Login'
 
-import Login from './pages/Login'
-import Edit from './pages/Edit'
-import EditAbout from './pages/EditAbout'
-import EditWorks from './pages/EditWorks'
-import EditWorkDetail from './pages/EditWorkDetail'
-import RegisterWork from './pages/RegisterWork'
+/* edit */
+import Edit from './pages/edit/Top'
+import EditAbout from './pages/edit/About'
+import EditWorks from './pages/edit/Works'
+import EditWorkDetail from './pages/edit/WorkDetail'
+import RegisterWork from './pages/edit/RegisterWork'
 
 Vue.use(VueRouter)
 
