@@ -2021,8 +2021,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     item: {
@@ -7883,7 +7881,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n@keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n.header[data-v-1f42fb90] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 9999;\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  background-color: #2e2e2e;\n  color: #fff;\n  padding: 10px 0;\n}\n.header__right[data-v-1f42fb90] {\n  list-style: none;\n  display: flex;\n  align-items: center;\n  padding-right: 10px;\n}\n.header__left[data-v-1f42fb90] {\n  padding-left: 10px;\n}\n.title[data-v-1f42fb90] {\n  font-size: calc(42px + 2.5vw);\n  text-decoration: none;\n  cursor: pointer;\n  color: #fff;\n}\n.icon[data-v-1f42fb90] {\n  color: #fff;\n  margin-right: 10px;\n  font-size: 25px;\n}\nli:last-child .icon[data-v-1f42fb90] {\n  margin-right: 0;\n}\n@media screen and (min-width: 768px) {\n.twitter .icon[data-v-1f42fb90] {\n    transition: 0.5s;\n}\n.twitter:hover .icon[data-v-1f42fb90] {\n    color: #67c5ff;\n}\n.github .icon[data-v-1f42fb90] {\n    transition: 0.5s;\n}\n.github:hover .icon[data-v-1f42fb90] {\n    color: #fde509;\n}\n.qiita .icon[data-v-1f42fb90] {\n    transition: 0.5s;\n}\n.qiita:hover .icon[data-v-1f42fb90] {\n    color: #24fa24;\n}\n.header__left[data-v-1f42fb90] {\n    padding-left: 20px;\n}\n.header__right[data-v-1f42fb90] {\n    padding-right: 20px;\n}\n.icon[data-v-1f42fb90] {\n    margin-right: 15px;\n    font-size: 30px;\n}\nli:last-child .icon[data-v-1f42fb90] {\n    margin-right: 0;\n}\n.title[data-v-1f42fb90] {\n    font-size: 60px;\n}\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n@keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n.header[data-v-1f42fb90] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 9999;\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  background-color: #2e2e2e;\n  color: #fff;\n  padding: 10px 0;\n}\n.header__right[data-v-1f42fb90] {\n  list-style: none;\n  display: flex;\n  align-items: center;\n  padding-right: 10px;\n}\n.header__left[data-v-1f42fb90] {\n  padding-left: 10px;\n}\n.title[data-v-1f42fb90] {\n  font-size: calc(42px + 2.5vw);\n  text-decoration: none;\n  cursor: pointer;\n  color: #fff;\n}\n.icon[data-v-1f42fb90] {\n  color: #fff;\n  margin-right: 10px;\n  font-size: 25px;\n}\nli:last-child .icon[data-v-1f42fb90] {\n  margin-right: 0;\n}\n@media screen and (min-width: 768px) {\n.twitter .icon[data-v-1f42fb90] {\n    transition: 0.5s;\n}\n.twitter:hover .icon[data-v-1f42fb90] {\n    color: #67c5ff;\n}\n.github .icon[data-v-1f42fb90] {\n    transition: 0.5s;\n}\n.github:hover .icon[data-v-1f42fb90] {\n    color: #fde509;\n}\n.qiita .icon[data-v-1f42fb90] {\n    transition: 0.5s;\n}\n.qiita:hover .icon[data-v-1f42fb90] {\n    color: #24fa24;\n}\n.header__left[data-v-1f42fb90] {\n    padding-left: 20px;\n}\n.header__right[data-v-1f42fb90] {\n    padding-right: 20px;\n}\n.icon[data-v-1f42fb90] {\n    margin-right: 15px;\n    font-size: 30px;\n}\nli:last-child .icon[data-v-1f42fb90] {\n    margin-right: 0;\n}\n.title[data-v-1f42fb90] {\n    font-size: 60px;\n}\n}\n@media screen and (min-width: 1025px) {\n.icon[data-v-1f42fb90] {\n    margin-right: 30px;\n}\nli:last-child .icon[data-v-1f42fb90] {\n    margin-right: 0;\n}\n}", ""]);
 
 // exports
 
@@ -7959,7 +7957,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".work[data-v-b4996508] {\n  text-align: center;\n  margin-top: 5px;\n  position: relative;\n}\n.work__img[data-v-b4996508] {\n  width: 100%;\n  max-width: 400px;\n  vertical-align: middle;\n}\n.work__over[data-v-b4996508] {\n  display: none;\n}\n@media screen and (min-width: 768px) {\n.work[data-v-b4996508] {\n    width: 100%;\n    max-width: 480px;\n    margin: 0 auto 5px auto;\n}\n.work:hover .work__over[data-v-b4996508] {\n    background-color: rgba(78, 80, 80, 0.3);\n    opacity: 1;\n}\n.work__img[data-v-b4996508] {\n    width: 100%;\n    max-width: 480px;\n}\n.work__over[data-v-b4996508] {\n    display: block;\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    left: 0;\n    transition: 0.5s;\n    opacity: 0;\n    text-decoration: none;\n    color: #fff;\n    font-size: 40px;\n    pointer-events: none;\n}\n.work__title[data-v-b4996508] {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n}\n}", ""]);
+exports.push([module.i, ".work[data-v-b4996508] {\n  text-align: center;\n  position: relative;\n  max-width: 250px;\n  margin: 10px auto 0 auto;\n}\n.work__img[data-v-b4996508] {\n  width: 100%;\n  vertical-align: middle;\n}\n.work__over[data-v-b4996508] {\n  display: none;\n}\n@media screen and (min-width: 768px) {\n.work[data-v-b4996508] {\n    width: 50%;\n    margin-top: 20px;\n}\n.work:hover .work__over[data-v-b4996508] {\n    background-color: rgba(78, 80, 80, 0.3);\n    opacity: 1;\n}\n.work__over[data-v-b4996508] {\n    display: block;\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    left: 0;\n    transition: 0.5s;\n    opacity: 0;\n    text-decoration: none;\n    color: #fff;\n    font-size: 40px;\n    pointer-events: none;\n}\n.work__title[data-v-b4996508] {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n}\n}", ""]);
 
 // exports
 
@@ -8073,7 +8071,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".v-enter-active[data-v-bd17564e],\n.v-leave-active[data-v-bd17564e] {\n  transition: opacity 1s, -webkit-transform 1s;\n  transition: opacity 1s, transform 1s;\n  transition: opacity 1s, transform 1s, -webkit-transform 1s;\n}\n.v-leave-active[data-v-bd17564e] {\n  position: absolute;\n}\n.v-enter[data-v-bd17564e] {\n  opacity: 0;\n  -webkit-transform: translateY(-10px);\n          transform: translateY(-10px);\n}\n.v-leave-to[data-v-bd17564e] {\n  opacity: 0;\n  -webkit-transform: translateY(20px);\n          transform: translateY(20px);\n}\n.text-font[data-v-bd17564e] {\n  font-family: \"Kosugi Maru\";\n}\n.title[data-v-bd17564e] {\n  font-size: calc(45px + 1vw);\n  color: #2e2e2e;\n}\n.text[data-v-bd17564e] {\n  font-size: calc(14px + 0.25vw);\n  padding: 10px;\n  line-height: calc(30px + 0.5vw);\n  letter-spacing: 0.2em;\n  color: #2e2e2e;\n  white-space: pre-line;\n}\n.cate-wrap[data-v-bd17564e] {\n  text-align: center;\n  max-width: 550px;\n  margin: 0 auto;\n}\n.skill-wrap[data-v-bd17564e] {\n  padding: 10px;\n  text-align: center;\n  margin-top: 10px;\n  max-width: 500px;\n  margin: 0 auto;\n}\n@media screen and (min-width: 768px) {\n.title[data-v-bd17564e] {\n    font-size: 52px;\n}\n.text[data-v-bd17564e] {\n    font-size: calc(14px + 0.25vw);\n    line-height: 30px;\n    letter-spacing: 0.4em;\n}\n}", ""]);
+exports.push([module.i, ".v-enter-active[data-v-bd17564e],\n.v-leave-active[data-v-bd17564e] {\n  transition: opacity 1s, -webkit-transform 1s;\n  transition: opacity 1s, transform 1s;\n  transition: opacity 1s, transform 1s, -webkit-transform 1s;\n}\n.v-leave-active[data-v-bd17564e] {\n  position: absolute;\n}\n.v-enter[data-v-bd17564e] {\n  opacity: 0;\n  -webkit-transform: translateY(-10px);\n          transform: translateY(-10px);\n}\n.v-leave-to[data-v-bd17564e] {\n  opacity: 0;\n  -webkit-transform: translateY(20px);\n          transform: translateY(20px);\n}\n.text-font[data-v-bd17564e] {\n  font-family: \"Kosugi Maru\";\n}\n.title[data-v-bd17564e] {\n  font-size: calc(45px + 1vw);\n  color: #2e2e2e;\n  text-align: center;\n}\n.text[data-v-bd17564e] {\n  font-size: calc(18px + 0.25vw);\n  padding: 10px;\n  line-height: calc(30px + 0.5vw);\n  letter-spacing: 0.2em;\n  color: #2e2e2e;\n  white-space: pre-line;\n  word-break: break-all;\n}\n.cate-wrap[data-v-bd17564e] {\n  text-align: center;\n  max-width: 550px;\n  margin: 0 auto;\n}\n.skill-wrap[data-v-bd17564e] {\n  padding: 10px;\n  text-align: center;\n  margin-top: 10px;\n  max-width: 500px;\n  margin: 0 auto;\n}\n.work-wrap[data-v-bd17564e] {\n  max-width: 800px;\n  margin: 0 auto;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around;\n}\n@media screen and (min-width: 768px) {\n.title[data-v-bd17564e] {\n    font-size: 58px;\n    margin-top: 15px;\n}\n.text[data-v-bd17564e] {\n    font-size: calc(18px + 0.25vw);\n    line-height: 30px;\n    letter-spacing: 0.4em;\n}\n}", ""]);
 
 // exports
 
@@ -41335,31 +41333,29 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      { staticClass: "work" },
-      [
-        _c(
-          "router-link",
-          { staticClass: "work__link", attrs: { to: "/works/" + _vm.item.id } },
-          [
-            _c("img", {
-              staticClass: "work__img",
-              attrs: { src: _vm.item.thumbnail }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "work__over" }, [
-          _c("span", { staticClass: "work__title" }, [
-            _vm._v(_vm._s(_vm.item.title))
-          ])
+  return _c(
+    "div",
+    { staticClass: "work" },
+    [
+      _c(
+        "router-link",
+        { staticClass: "work__link", attrs: { to: "/works/" + _vm.item.id } },
+        [
+          _c("img", {
+            staticClass: "work__img",
+            attrs: { src: _vm.item.thumbnail }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "work__over" }, [
+        _c("span", { staticClass: "work__title" }, [
+          _vm._v(_vm._s(_vm.item.title))
         ])
-      ],
-      1
-    )
-  ])
+      ])
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -42270,58 +42266,57 @@ var render = function() {
       _vm.loading ? _c("Loading") : _vm._e(),
       _vm._v(" "),
       !_vm.loading
-        ? _c(
-            "div",
-            [
-              _c("h3", { staticClass: "title" }, [_vm._v("I am ...")]),
-              _vm._v(" "),
-              _c("p", { staticClass: "text text-font" }, [
-                _vm._v(_vm._s(_vm.desc))
-              ]),
-              _vm._v(" "),
-              _c("h3", { staticClass: "title" }, [_vm._v("skills")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "cate-wrap" }, [_c("CateBtn")], 1),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "skill-wrap" },
-                [
-                  _c(
-                    "transition-group",
-                    _vm._l(_vm.skills, function(skill) {
-                      return _c("Skill", {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value:
-                              _vm.category === "all" ||
-                              _vm.category === skill.category,
-                            expression:
-                              "category === 'all' || category === skill.category"
-                          }
-                        ],
-                        key: skill.id,
-                        attrs: { item: skill }
-                      })
-                    }),
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("h3", { staticClass: "title" }, [_vm._v("works")]),
-              _vm._v(" "),
-              !_vm.loading
-                ? _vm._l(_vm.works, function(work) {
-                    return _c("Work", { key: work.id, attrs: { item: work } })
-                  })
-                : _vm._e()
-            ],
-            2
-          )
+        ? _c("div", [
+            _c("h3", { staticClass: "title" }, [_vm._v("I am ...")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text text-font" }, [
+              _vm._v(_vm._s(_vm.desc))
+            ]),
+            _vm._v(" "),
+            _c("h3", { staticClass: "title" }, [_vm._v("skills")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "cate-wrap" }, [_c("CateBtn")], 1),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "skill-wrap" },
+              [
+                _c(
+                  "transition-group",
+                  _vm._l(_vm.skills, function(skill) {
+                    return _c("Skill", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value:
+                            _vm.category === "all" ||
+                            _vm.category === skill.category,
+                          expression:
+                            "category === 'all' || category === skill.category"
+                        }
+                      ],
+                      key: skill.id,
+                      attrs: { item: skill }
+                    })
+                  }),
+                  1
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("h3", { staticClass: "title" }, [_vm._v("works")]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "work-wrap" },
+              _vm._l(_vm.works, function(work) {
+                return _c("Work", { key: work.id, attrs: { item: work } })
+              }),
+              1
+            )
+          ])
         : _vm._e()
     ],
     1

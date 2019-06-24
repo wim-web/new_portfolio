@@ -20,9 +20,9 @@
         </transition-group>
       </div>
       <h3 class="title">works</h3>
-      <template v-if="!loading">
+      <div class="work-wrap">
         <Work v-for="work in works" :key="work.id" :item="work"/>
-      </template>
+      </div>
     </div>
   </div>
 </template>
@@ -111,15 +111,17 @@ export default {
 .title {
   font-size: calc(45px + 1vw);
   color: rgb(46, 46, 46);
+  text-align: center;
 }
 
 .text {
-  font-size: calc(14px + 0.25vw);
+  font-size: calc(18px + 0.25vw);
   padding: 10px;
   line-height: calc(30px + 0.5vw);
   letter-spacing: 0.2em;
   color: rgb(46, 46, 46);
   white-space: pre-line;
+  word-break: break-all;
 }
 
 .cate-wrap {
@@ -135,15 +137,22 @@ export default {
   max-width: 500px;
   margin: 0 auto;
 }
-
+.work-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 @media screen and (min-width: 768px) {
 
   .title {
-    font-size: 52px;
+    font-size: 58px;
+    margin-top: 15px;
   }
 
   .text {
-    font-size: calc(14px + 0.25vw);
+    font-size: calc(18px + 0.25vw);
     line-height: 30px;
     letter-spacing: 0.4em;
   }

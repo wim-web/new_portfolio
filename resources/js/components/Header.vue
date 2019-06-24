@@ -107,4 +107,14 @@ li:last-child .icon {
     font-size: 60px;
   }
 }
+@media screen and (min-width: 1025px) {
+	.icon {
+		margin-right: 30px;
+	}
+
+	li:last-child .icon {
+		margin-right: 0;
+	}
+
+}
 </style>
