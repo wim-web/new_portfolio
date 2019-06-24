@@ -3179,9 +3179,8 @@ __webpack_require__.r(__webpack_exports__);
     Header: _components_Header__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   methods: {
-    toAbout: function toAbout() {
-      this.$router.push('/about');
-      this.opened = false;
+    toTop: function toTop() {
+      this.$router.push('/');
     }
   }
 });
@@ -7996,7 +7995,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".work[data-v-b4996508] {\n  text-align: center;\n  position: relative;\n  max-width: 250px;\n  margin: 10px auto 0 auto;\n}\n.work__img[data-v-b4996508] {\n  width: 100%;\n  vertical-align: middle;\n}\n.work__over[data-v-b4996508] {\n  display: none;\n}\n@media screen and (min-width: 768px) {\n.work[data-v-b4996508] {\n    width: 50%;\n    margin-top: 20px;\n}\n.work:hover .work__over[data-v-b4996508] {\n    background-color: rgba(78, 80, 80, 0.3);\n    opacity: 1;\n}\n.work__over[data-v-b4996508] {\n    display: block;\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    left: 0;\n    transition: 0.5s;\n    opacity: 0;\n    text-decoration: none;\n    color: #fff;\n    font-size: 40px;\n    pointer-events: none;\n}\n.work__title[data-v-b4996508] {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n}\n}", ""]);
+exports.push([module.i, ".work[data-v-b4996508] {\n  text-align: center;\n  position: relative;\n  max-width: 250px;\n  margin: 10px auto 0 auto;\n}\n.work__img[data-v-b4996508] {\n  width: 100%;\n  vertical-align: middle;\n}\n.work__over[data-v-b4996508] {\n  display: none;\n}\n@media screen and (min-width: 768px) {\n.work[data-v-b4996508] {\n    width: 50%;\n    margin-top: 20px;\n    max-width: 300px;\n}\n.work:hover .work__over[data-v-b4996508] {\n    background-color: rgba(78, 80, 80, 0.3);\n    opacity: 1;\n}\n.work__over[data-v-b4996508] {\n    display: block;\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    left: 0;\n    transition: 0.5s;\n    opacity: 0;\n    text-decoration: none;\n    color: #fff;\n    font-size: 40px;\n    pointer-events: none;\n}\n.work__title[data-v-b4996508] {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n}\n}", ""]);
 
 // exports
 
@@ -41111,7 +41110,7 @@ var render = function() {
       "h1",
       { staticClass: "header__left" },
       [
-        _c("router-link", { staticClass: "title", attrs: { to: "/about" } }, [
+        _c("router-link", { staticClass: "title", attrs: { to: "/" } }, [
           _vm._v("techx2")
         ])
       ],
@@ -42525,7 +42524,7 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("button", { staticClass: "btn", on: { click: _vm.toAbout } }, [
+      _c("button", { staticClass: "btn", on: { click: _vm.toTop } }, [
         _c("i", { staticClass: "fas fa-home icon" })
       ])
     ],
@@ -60199,13 +60198,10 @@ var routes = [{
   path: '/',
   component: _pages_web_Top__WEBPACK_IMPORTED_MODULE_3__["default"],
   children: [{
-    path: 'works',
-    component: _pages_web_Works__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }, {
-    path: 'about',
+    path: '/',
     component: _pages_web_About__WEBPACK_IMPORTED_MODULE_4__["default"]
   }, {
-    path: 'works/:id',
+    path: '/works/:id',
     component: _pages_web_WorkDetail__WEBPACK_IMPORTED_MODULE_6__["default"],
     props: true
   }]
@@ -60255,29 +60251,6 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   }
 });
 /* harmony default export */ __webpack_exports__["default"] = (router);
-
-/***/ }),
-
-/***/ "./resources/js/store/about.js":
-/*!*************************************!*\
-  !*** ./resources/js/store/about.js ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var state = {};
-var getters = {};
-var mutations = {};
-var actions = {};
-/* harmony default export */ __webpack_exports__["default"] = ({
-  namespaced: true,
-  state: state,
-  mutations: mutations,
-  getters: getters,
-  actions: actions
-});
 
 /***/ }),
 
@@ -60340,55 +60313,6 @@ var mutations = {
 
 /***/ }),
 
-/***/ "./resources/js/store/header.js":
-/*!**************************************!*\
-  !*** ./resources/js/store/header.js ***!
-  \**************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var state = {
-  isSmall: false,
-  isWork: true,
-  isAbout: true
-};
-var getters = {};
-var mutations = {
-  setIsSmall: function setIsSmall(state, bool) {
-    state.isSmall = bool;
-  },
-  isWork: function isWork(state) {
-    state.isWork = true;
-    state.isAbout = false;
-  },
-  isAbout: function isAbout(state) {
-    state.isWork = false;
-    state.isAbout = true;
-  },
-  resetState: function resetState(state) {
-    state.isSmall = false;
-    state.isAbout = true;
-    state.isWork = true;
-  }
-};
-var actions = {
-  resetState: function resetState(_ref) {
-    var commit = _ref.commit;
-    commit('resetState');
-  }
-};
-/* harmony default export */ __webpack_exports__["default"] = ({
-  namespaced: true,
-  state: state,
-  getters: getters,
-  mutations: mutations,
-  actions: actions
-});
-
-/***/ }),
-
 /***/ "./resources/js/store/index.js":
 /*!*************************************!*\
   !*** ./resources/js/store/index.js ***!
@@ -60401,14 +60325,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header */ "./resources/js/store/header.js");
-/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./auth */ "./resources/js/store/auth.js");
-/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./about */ "./resources/js/store/about.js");
-/* harmony import */ var _category__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./category */ "./resources/js/store/category.js");
-/* harmony import */ var _loading__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./loading */ "./resources/js/store/loading.js");
-/* harmony import */ var vuex_persistedstate__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuex-persistedstate */ "./node_modules/vuex-persistedstate/dist/vuex-persistedstate.es.js");
-
-
+/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./auth */ "./resources/js/store/auth.js");
+/* harmony import */ var _category__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./category */ "./resources/js/store/category.js");
+/* harmony import */ var _loading__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./loading */ "./resources/js/store/loading.js");
+/* harmony import */ var vuex_persistedstate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex-persistedstate */ "./node_modules/vuex-persistedstate/dist/vuex-persistedstate.es.js");
 
 
 
@@ -60418,13 +60338,11 @@ __webpack_require__.r(__webpack_exports__);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__["default"]);
 var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
   modules: {
-    header: _header__WEBPACK_IMPORTED_MODULE_2__["default"],
-    auth: _auth__WEBPACK_IMPORTED_MODULE_3__["default"],
-    about: _about__WEBPACK_IMPORTED_MODULE_4__["default"],
-    cate: _category__WEBPACK_IMPORTED_MODULE_5__["default"],
-    loading: _loading__WEBPACK_IMPORTED_MODULE_6__["default"]
+    auth: _auth__WEBPACK_IMPORTED_MODULE_2__["default"],
+    cate: _category__WEBPACK_IMPORTED_MODULE_3__["default"],
+    loading: _loading__WEBPACK_IMPORTED_MODULE_4__["default"]
   },
-  plugins: [Object(vuex_persistedstate__WEBPACK_IMPORTED_MODULE_7__["default"])({
+  plugins: [Object(vuex_persistedstate__WEBPACK_IMPORTED_MODULE_5__["default"])({
     key: 'PortfoliO',
     paths: ['auth.isLogin'],
     storage: window.sessionStorage

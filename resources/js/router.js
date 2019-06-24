@@ -25,15 +25,11 @@ const routes = [
         component: Top,
         children: [
             {
-                path: 'works',
-                component: Works,
-            },
-            {
-                path: 'about',
+                path: '/',
                 component: About,
             },
             {
-                path: 'works/:id',
+                path: '/works/:id',
                 component: WorkDetail,
                 props: true,
             }

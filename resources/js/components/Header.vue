@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <h1 class="header__left">
-      <router-link to="/about" class="title">techx2</router-link>
+      <router-link to="/" class="title">techx2</router-link>
     </h1>
     <ul class="header__right">
       <li>

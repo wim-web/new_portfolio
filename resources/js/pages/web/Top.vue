@@ -7,7 +7,7 @@
       </transition>
     </main>
     <!-- スマホ用menu -->
-    <button class="btn" @click="toAbout">
+    <button class="btn" @click="toTop">
         <i class="fas fa-home icon"></i>
     </button>
     <!-- スマホ用menu -->
@@ -27,9 +27,8 @@ export default {
         Header,
     },
     methods: {
-      toAbout () {
-          this.$router.push('/about')
-          this.opened = false
+      toTop () {
+          this.$router.push('/');
       },
     },
 }

@@ -42,6 +42,7 @@ export default {
   .work {
 		width: 50%;
 		margin-top: 20px;
+    max-width: 300px;
 
     &:hover .work__over {
       background-color: rgba(78, 80, 80, 0.3);

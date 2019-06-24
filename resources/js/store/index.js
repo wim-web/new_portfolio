@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import header from './header'
 import auth from './auth'
-import about from './about'
 import cate from './category'
 import loading from './loading'
 import createPersistedState from 'vuex-persistedstate';
@@ -12,9 +10,7 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     modules: {
-        header,
         auth,
-        about,
         cate,
         loading,
     },
