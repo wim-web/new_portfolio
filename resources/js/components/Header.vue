@@ -5,18 +5,18 @@
     </h1>
     <ul class="header__right">
       <li>
-        <a href="https://twitter.com/wim_web" class="twitter" target="_brank">
-          <i class="fab fa-twitter icon"></i>
+        <a href="https://twitter.com/wim_web" target="_brank">
+          <i class="fab fa-twitter icon twitter"></i>
         </a>
       </li>
       <li>
         <a href="https://github.com/wim-web" class="github" target="_brank">
-          <i class="fab fa-github icon"></i>
+          <i class="fab fa-github icon github"></i>
         </a>
       </li>
       <li>
         <a href="https://qiita.com/wim" class="qiita" target="_brank">
-          <i class="fab fa-quora icon"></i>
+          <i class="fab fa-quora icon qiita"></i>
         </a>
       </li>
     </ul>
@@ -67,22 +67,22 @@ li:last-child .icon {
 }
 
 @media screen and (min-width: $tab) {
-	.twitter .icon {
+	.twitter {
 		transition: .5s;
 	}
-	.twitter:hover .icon{
+	.twitter:hover {
 		color: #67c5ff;
 	}
-	.github .icon {
+	.github {
 		transition: .5s;
 	}
-	.github:hover .icon{
+	.github:hover {
 		color: #fde509;
 	}
-	.qiita .icon {
+	.qiita {
 		transition: .5s;
 	}
-	.qiita:hover .icon{
+	.qiita:hover {
 		color: #24fa24;
 	}
 

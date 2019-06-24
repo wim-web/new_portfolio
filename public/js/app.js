@@ -7920,7 +7920,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n@keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n.header[data-v-1f42fb90] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 9999;\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  background-color: #2e2e2e;\n  color: #fff;\n  padding: 10px 0;\n}\n.header__right[data-v-1f42fb90] {\n  list-style: none;\n  display: flex;\n  align-items: center;\n  padding-right: 10px;\n}\n.header__left[data-v-1f42fb90] {\n  padding-left: 10px;\n}\n.title[data-v-1f42fb90] {\n  font-size: calc(42px + 2.5vw);\n  text-decoration: none;\n  cursor: pointer;\n  color: #fff;\n}\n.icon[data-v-1f42fb90] {\n  color: #fff;\n  margin-right: 10px;\n  font-size: 25px;\n}\nli:last-child .icon[data-v-1f42fb90] {\n  margin-right: 0;\n}\n@media screen and (min-width: 768px) {\n.twitter .icon[data-v-1f42fb90] {\n    transition: 0.5s;\n}\n.twitter:hover .icon[data-v-1f42fb90] {\n    color: #67c5ff;\n}\n.github .icon[data-v-1f42fb90] {\n    transition: 0.5s;\n}\n.github:hover .icon[data-v-1f42fb90] {\n    color: #fde509;\n}\n.qiita .icon[data-v-1f42fb90] {\n    transition: 0.5s;\n}\n.qiita:hover .icon[data-v-1f42fb90] {\n    color: #24fa24;\n}\n.header__left[data-v-1f42fb90] {\n    padding-left: 20px;\n}\n.header__right[data-v-1f42fb90] {\n    padding-right: 20px;\n}\n.icon[data-v-1f42fb90] {\n    margin-right: 15px;\n    font-size: 30px;\n}\nli:last-child .icon[data-v-1f42fb90] {\n    margin-right: 0;\n}\n.title[data-v-1f42fb90] {\n    font-size: 60px;\n}\n}\n@media screen and (min-width: 1025px) {\n.icon[data-v-1f42fb90] {\n    margin-right: 30px;\n}\nli:last-child .icon[data-v-1f42fb90] {\n    margin-right: 0;\n}\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n@keyframes ready-data-v-1f42fb90 {\n0% {\n    color: #fff;\n}\n50% {\n    color: #ff0000;\n}\n100% {\n    color: #fff;\n}\n}\n.header[data-v-1f42fb90] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 9999;\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  background-color: #2e2e2e;\n  color: #fff;\n  padding: 10px 0;\n}\n.header__right[data-v-1f42fb90] {\n  list-style: none;\n  display: flex;\n  align-items: center;\n  padding-right: 10px;\n}\n.header__left[data-v-1f42fb90] {\n  padding-left: 10px;\n}\n.title[data-v-1f42fb90] {\n  font-size: calc(42px + 2.5vw);\n  text-decoration: none;\n  cursor: pointer;\n  color: #fff;\n}\n.icon[data-v-1f42fb90] {\n  color: #fff;\n  margin-right: 10px;\n  font-size: 25px;\n}\nli:last-child .icon[data-v-1f42fb90] {\n  margin-right: 0;\n}\n@media screen and (min-width: 768px) {\n.twitter[data-v-1f42fb90] {\n    transition: 0.5s;\n}\n.twitter[data-v-1f42fb90]:hover {\n    color: #67c5ff;\n}\n.github[data-v-1f42fb90] {\n    transition: 0.5s;\n}\n.github[data-v-1f42fb90]:hover {\n    color: #fde509;\n}\n.qiita[data-v-1f42fb90] {\n    transition: 0.5s;\n}\n.qiita[data-v-1f42fb90]:hover {\n    color: #24fa24;\n}\n.header__left[data-v-1f42fb90] {\n    padding-left: 20px;\n}\n.header__right[data-v-1f42fb90] {\n    padding-right: 20px;\n}\n.icon[data-v-1f42fb90] {\n    margin-right: 15px;\n    font-size: 30px;\n}\nli:last-child .icon[data-v-1f42fb90] {\n    margin-right: 0;\n}\n.title[data-v-1f42fb90] {\n    font-size: 60px;\n}\n}\n@media screen and (min-width: 1025px) {\n.icon[data-v-1f42fb90] {\n    margin-right: 30px;\n}\nli:last-child .icon[data-v-1f42fb90] {\n    margin-right: 0;\n}\n}", ""]);
 
 // exports
 
@@ -41130,11 +41130,8 @@ var staticRenderFns = [
       _c("li", [
         _c(
           "a",
-          {
-            staticClass: "twitter",
-            attrs: { href: "https://twitter.com/wim_web", target: "_brank" }
-          },
-          [_c("i", { staticClass: "fab fa-twitter icon" })]
+          { attrs: { href: "https://twitter.com/wim_web", target: "_brank" } },
+          [_c("i", { staticClass: "fab fa-twitter icon twitter" })]
         )
       ]),
       _vm._v(" "),
@@ -41145,7 +41142,7 @@ var staticRenderFns = [
             staticClass: "github",
             attrs: { href: "https://github.com/wim-web", target: "_brank" }
           },
-          [_c("i", { staticClass: "fab fa-github icon" })]
+          [_c("i", { staticClass: "fab fa-github icon github" })]
         )
       ]),
       _vm._v(" "),
@@ -41156,7 +41153,7 @@ var staticRenderFns = [
             staticClass: "qiita",
             attrs: { href: "https://qiita.com/wim", target: "_brank" }
           },
-          [_c("i", { staticClass: "fab fa-quora icon" })]
+          [_c("i", { staticClass: "fab fa-quora icon qiita" })]
         )
       ])
     ])
