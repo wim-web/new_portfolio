@@ -2,7 +2,7 @@
   <div class="wrapper">
     <Header />
     <main class="main">
-      <transition leave-active-class="animated fadeOutDown" enter-active-class="animated fadeIn" mode="out-in">
+      <transition name="router" mode="out-in">
         <router-view></router-view>
       </transition>
     </main>
@@ -36,6 +36,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.router-enter,
+.router-leave-to {
+  opacity: 0;
+}
+
+.router-enter-active,
+.router-leave-active {
+  transition: opacity 0.5s;
+}
+
 .menu__link {
     text-decoration: none;
     color: #fff;

@@ -7939,7 +7939,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".loading[data-v-6ca9e6be] {\n  font-size: calc(45px + 1vw);\n  text-align: center;\n}", ""]);
+exports.push([module.i, ".loader[data-v-6ca9e6be] {\n  font-size: 10px;\n  margin: 50px auto;\n  text-indent: -9999em;\n  width: 11em;\n  height: 11em;\n  border-radius: 50%;\n  background: rgba(160, 160, 160, 0.6);\n  background: linear-gradient(to right, rgba(160, 160, 160, 0.6) 10%, rgba(255, 255, 255, 0) 42%);\n  position: relative;\n  -webkit-animation: load3-data-v-6ca9e6be 1.4s infinite linear;\n  animation: load3-data-v-6ca9e6be 1.4s infinite linear;\n  -webkit-transform: translateZ(0);\n  transform: translateZ(0);\n}\n.loader[data-v-6ca9e6be]:before {\n  width: 50%;\n  height: 50%;\n  background: rgba(160, 160, 160, 0.6);\n  border-radius: 100% 0 0 0;\n  position: absolute;\n  top: 0;\n  left: 0;\n  content: \"\";\n}\n.loader[data-v-6ca9e6be]:after {\n  background: #f8fafc;\n  width: 75%;\n  height: 75%;\n  border-radius: 50%;\n  content: \"\";\n  margin: auto;\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n}\n@-webkit-keyframes load3-data-v-6ca9e6be {\n0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n}\n}\n@keyframes load3-data-v-6ca9e6be {\n0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n}\n}", ""]);
 
 // exports
 
@@ -8148,7 +8148,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".menu__link[data-v-24668ba1] {\n  text-decoration: none;\n  color: #fff;\n  cursor: pointer;\n}\n.wrapper[data-v-24668ba1] {\n  height: 100%;\n}\n.main[data-v-24668ba1] {\n  width: 90%;\n  max-width: 800px;\n  margin: 0 auto;\n  margin-top: 100px;\n}\n.btn[data-v-24668ba1] {\n  border-radius: 50%;\n  background-color: rgba(187, 187, 187, 0.767);\n  height: 50px;\n  width: 50px;\n  position: fixed;\n  bottom: 15px;\n  right: 15px;\n  z-index: 100;\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);\n}\n.icon[data-v-24668ba1] {\n  font-size: 20px;\n  color: #fff;\n}\n@media screen and (min-width: 768px) {\n.btn[data-v-24668ba1] {\n    display: none;\n}\n}", ""]);
+exports.push([module.i, ".router-enter[data-v-24668ba1],\n.router-leave-to[data-v-24668ba1] {\n  opacity: 0;\n}\n.router-enter-active[data-v-24668ba1],\n.router-leave-active[data-v-24668ba1] {\n  transition: opacity 0.5s;\n}\n.menu__link[data-v-24668ba1] {\n  text-decoration: none;\n  color: #fff;\n  cursor: pointer;\n}\n.wrapper[data-v-24668ba1] {\n  height: 100%;\n}\n.main[data-v-24668ba1] {\n  width: 90%;\n  max-width: 800px;\n  margin: 0 auto;\n  margin-top: 100px;\n}\n.btn[data-v-24668ba1] {\n  border-radius: 50%;\n  background-color: rgba(187, 187, 187, 0.767);\n  height: 50px;\n  width: 50px;\n  position: fixed;\n  bottom: 15px;\n  right: 15px;\n  z-index: 100;\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);\n}\n.icon[data-v-24668ba1] {\n  font-size: 20px;\n  color: #fff;\n}\n@media screen and (min-width: 768px) {\n.btn[data-v-24668ba1] {\n    display: none;\n}\n}", ""]);
 
 // exports
 
@@ -41183,7 +41183,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "loading" }, [_vm._v("loading...")])
+  return _c("div", { staticClass: "loader" }, [_vm._v("\n    Loading...\n")])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -42520,13 +42520,7 @@ var render = function() {
         [
           _c(
             "transition",
-            {
-              attrs: {
-                "leave-active-class": "animated fadeOutDown",
-                "enter-active-class": "animated fadeIn",
-                mode: "out-in"
-              }
-            },
+            { attrs: { name: "router", mode: "out-in" } },
             [_c("router-view")],
             1
           )
