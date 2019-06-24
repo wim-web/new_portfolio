@@ -1,20 +1,10 @@
 <template>
-    <div>
-        <p  v-if="item.category === 'front'"
-            class="skill front"
-        >
+    <div class="skill"
+        :class="{ front: item.category === 'front',
+                  back: item.category === 'back',
+                  others: item.category === 'others'
+                }">
             {{ item.skill }}
-        </p>
-        <p  v-else-if="item.category === 'back'"
-            class="skill back"
-        >
-            {{ item.skill }}
-        </p>
-        <p  v-else-if="item.category === 'others'"
-            class="skill others"
-        >
-            {{ item.skill }}
-        </p>
     </div>
 </template>
 
@@ -31,9 +21,9 @@ export default {
 
 <style lang="scss" scoped>
 .skill {
-    display: block;
+    display: inline-block;
     padding: 0.2em 1em;
-    text-decoration: none;
+    width: 25%;
     border-radius: 3px;
     font-size: calc(26px + 1vw);
     margin-bottom: 5px;

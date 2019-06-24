@@ -19,30 +19,37 @@
             />
             </transition-group>
         </div>
-        <h3 class="title">contact</h3>
-        <SnsBtn />
+        <h3 class="title">works</h3>
+        <template v-if="!loading">
+            <Work
+            v-for="work in works"
+            :key="work.id"
+            :item="work"
+        />
+        </template>
         
     </div>
 </div>
 </template>
 
 <script>
+import Work from '../../components/Work'
 import Skill from '../../components/Skill'
 import CateBtn from '../../components/CateBtn'
-import SnsBtn from '../../components/SnsButton'
 import Loading from '../../components/Loading'
 export default {
     data () {
         return {
             desc: '',
             skills: [],
+            works: [],
         }
     },
     components: {
         Skill,
         CateBtn,
-        SnsBtn,
         Loading,
+        Work,
     },
     methods: {
         async getAbout () {
@@ -54,6 +61,12 @@ export default {
             this.desc = desc
             this.skills = skills
 
+            this.$store.commit('loading/setLoading', false)
+        },
+        async getWorks () {
+            this.$store.commit('loading/setLoading', true)
+            const response = await axios.get('/api/works')
+            this.works = response.data
             this.$store.commit('loading/setLoading', false)
         },
     },
@@ -73,6 +86,7 @@ export default {
         this.$store.commit('cate/resetCate')
         this.$store.commit('header/setIsSmall', true)
         this.getAbout()
+        this.getWorks()
     },
 }
 </script>

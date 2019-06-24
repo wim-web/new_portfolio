@@ -1,124 +1,80 @@
 <template>
-    <header
-        class="header"
-        :class="{ 'header--small': isSmall }">
-        <div class="header-wrapper">
-            <!-- <InputLink /> -->
-            <p>
-                <a @click="toTop" class="link link--active">Welcome</a>
-            </p>
-            <router-link to="/about"
-                class="link"
-                :class="{'link--active': isAbout}">
-                About
-            </router-link>
-            <router-link to="/works"
-                class="link"
-                :class="{'link--active': isWork}">
-                Works
-            </router-link>
-        </div>
-    </header>
+  <header class="header">
+    <h1 class="header__left">
+        <router-link to="/about" class="title">techx2</router-link>
+    </h1>
+    <ul class="header__right">
+        <li>
+        <a href="https://twitter.com/wim_web" class="twitter" target="_brank">
+            <i class="fab fa-twitter icon"></i>
+        </a>
+        </li>
+        <li>
+        <a href="https://github.com/wim-web" class="github" target="_brank">
+            <i class="fab fa-github icon"></i>
+        </a>
+        </li>
+        <li>
+        <a href="https://qiita.com/wim" class="github" target="_brank">
+            <i class="fab fa-quora icon"></i>
+        </a>
+        </li>
+    </ul>
+  </header>
 </template>
 
 <script>
 
-import InputLink from './InputLink'
-
 export default {
-    data () {
-        return {
-        }
-    },
-    components: {
-        InputLink,
-    },
-    methods: {
-        toTop() {
-            this.$store.dispatch('header/resetState')
-            this.$router.push('/')
-        }
-    },
-    computed: {
-        isSmall () {
-            return this.$store.state.header.isSmall
-        },
-        isWork () {
-            return this.$store.state.header.isWork
-        },
-        isAbout () {
-            return this.$store.state.header.isAbout
-        }
-    }
-}
+  data() {
+    return {};
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-
-@import '../../sass/_variables';
-
-.header{
+@import "../../sass/_variables";
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
     width: 100%;
-    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     background-color: rgb(46, 46, 46);
     color: #fff;
-    transition: 2s;
+    padding: 10px 0;
 
-    &-wrapper {
-        width: 100%;
-        text-align: center;
+    &__right {
+        list-style: none;
+        display: flex;
+        align-items: center;
     }
-    
-    &--small {
-        height: calc(150px + 10vw);
+
+    &__left {
+        padding-left: 10px;
     }
 }
 
 .title {
-    font-size: 60px;
+  font-size: calc(42px + 2.5vw);
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;;
 }
 
-.link {
-    display: inline-block;
-    font-size: calc(42px + 2.5vw);
-    text-decoration: none;
-    color: gray;
-    padding: 0 10px;
-    transition: .3s;
-    cursor: pointer;
-    &--active {
-        color: #fff;
-    }
+.icon {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 25px;
 }
 
 @media screen and (min-width: $tab) {
-    .header {
-        &--small {
-            height: 100%;
-            width: 50%;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
 
-        &__menu {
-            font-size: 55px;
-            padding: 15px 10px;
-        }
-    }
-    .link {
-        font-size: 60px;
-    }
+  .title {
+    font-size: 60px;
+  }
 }
-@media screen and (min-width: $pc) {
-    .header {
-        &--small {
-            width: 512px;
-            left: calc(calc(100% - 1024px) / 2);
-        }
-    }
-}
+
 </style>
