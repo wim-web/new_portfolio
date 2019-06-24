@@ -1,80 +1,110 @@
 <template>
   <header class="header">
     <h1 class="header__left">
-        <router-link to="/about" class="title">techx2</router-link>
+      <router-link to="/about" class="title">techx2</router-link>
     </h1>
     <ul class="header__right">
-        <li>
+      <li>
         <a href="https://twitter.com/wim_web" class="twitter" target="_brank">
-            <i class="fab fa-twitter icon"></i>
+          <i class="fab fa-twitter icon"></i>
         </a>
-        </li>
-        <li>
+      </li>
+      <li>
         <a href="https://github.com/wim-web" class="github" target="_brank">
-            <i class="fab fa-github icon"></i>
+          <i class="fab fa-github icon"></i>
         </a>
-        </li>
-        <li>
-        <a href="https://qiita.com/wim" class="github" target="_brank">
-            <i class="fab fa-quora icon"></i>
+      </li>
+      <li>
+        <a href="https://qiita.com/wim" class="qiita" target="_brank">
+          <i class="fab fa-quora icon"></i>
         </a>
-        </li>
+      </li>
     </ul>
   </header>
 </template>
 
-<script>
-
-export default {
-  data() {
-    return {};
-  },
-};
-</script>
-
 <style lang="scss" scoped>
 @import "../../sass/_variables";
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(46, 46, 46);
+  color: #fff;
+  padding: 10px 0;
+
+  &__right {
+    list-style: none;
     display: flex;
-    justify-content: space-between;
-    background-color: rgb(46, 46, 46);
-    color: #fff;
-    padding: 10px 0;
+    align-items: center;
+		padding-right: 10px;
+  }
 
-    &__right {
-        list-style: none;
-        display: flex;
-        align-items: center;
-    }
-
-    &__left {
-        padding-left: 10px;
-    }
+  &__left {
+    padding-left: 10px;
+  }
 }
 
 .title {
   font-size: calc(42px + 2.5vw);
   text-decoration: none;
   cursor: pointer;
-  color: #fff;;
+  color: #fff;
 }
 
 .icon {
-    color: #fff;
-    margin-right: 10px;
-    font-size: 25px;
+  color: #fff;
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+li:last-child .icon {
+	margin-right: 0;
 }
 
 @media screen and (min-width: $tab) {
+	.twitter .icon {
+		transition: .5s;
+	}
+	.twitter:hover .icon{
+		color: #67c5ff;
+	}
+	.github .icon {
+		transition: .5s;
+	}
+	.github:hover .icon{
+		color: #fde509;
+	}
+	.qiita .icon {
+		transition: .5s;
+	}
+	.qiita:hover .icon{
+		color: #24fa24;
+	}
+
+	.header__left {
+		padding-left: 20px;
+	}
+
+	.header__right {
+		padding-right: 20px;
+	}
+
+	.icon {
+		margin-right: 15px;
+		font-size: 30px;
+	}
+
+	li:last-child .icon {
+		margin-right: 0;
+	}
 
   .title {
     font-size: 60px;
   }
 }
-
 </style>

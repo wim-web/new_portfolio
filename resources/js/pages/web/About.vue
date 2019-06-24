@@ -1,98 +1,94 @@
 <template>
-<div>
-    <Loading v-if="loading" />
-    <div class="wrapper" v-if="!loading">
-        <h3 class="title">I am ...</h3>
-        <p class="text text-font">{{ desc }}</p>
+  <div>
+    <Loading v-if="loading"/>
+    <div v-if="!loading">
+      <h3 class="title">I am ...</h3>
+      <p class="text text-font">{{ desc }}</p>
 
-        <h3 class="title">skills</h3>
-        <div class="cate-wrap">
-            <CateBtn />
-        </div>
-        <div class="skill-wrap">
-            <transition-group>
+      <h3 class="title">skills</h3>
+      <div class="cate-wrap">
+        <CateBtn/>
+      </div>
+      <div class="skill-wrap">
+        <transition-group>
             <Skill
-                v-show="category === 'all' || category === skill.category"
-                v-for="skill in skills"
-                :key="skill.id"
-                :item="skill"
+            v-show="category === 'all' || category === skill.category"
+            v-for="skill in skills"
+            :key="skill.id"
+            :item="skill"
             />
-            </transition-group>
-        </div>
-        <h3 class="title">works</h3>
-        <template v-if="!loading">
-            <Work
-            v-for="work in works"
-            :key="work.id"
-            :item="work"
-        />
-        </template>
-        
+        </transition-group>
+      </div>
+      <h3 class="title">works</h3>
+      <template v-if="!loading">
+        <Work v-for="work in works" :key="work.id" :item="work"/>
+      </template>
     </div>
-</div>
+  </div>
 </template>
 
 <script>
-import Work from '../../components/Work'
-import Skill from '../../components/Skill'
-import CateBtn from '../../components/CateBtn'
-import Loading from '../../components/Loading'
+import Work from "../../components/Work";
+import Skill from "../../components/Skill";
+import CateBtn from "../../components/CateBtn";
+import Loading from "../../components/Loading";
 export default {
-    data () {
-        return {
-            desc: '',
-            skills: [],
-            works: [],
-        }
-    },
-    components: {
-        Skill,
-        CateBtn,
-        Loading,
-        Work,
-    },
-    methods: {
-        async getAbout () {
-            this.$store.commit('loading/setLoading', true)
-            const response = await axios.get('/api/about')
-            const desc = response.data['user'].desc
-            const skills = response.data['skill']
+  data() {
+    return {
+      desc: "",
+      skills: [],
+      works: []
+    };
+  },
+  components: {
+    Skill,
+    CateBtn,
+    Loading,
+    Work
+  },
+  methods: {
+    async getAbout() {
+      this.$store.commit("loading/setLoading", true);
+      const response = await axios.get("/api/about");
+      const desc = response.data["user"].desc;
+      const skills = response.data["skill"];
 
-            this.desc = desc
-            this.skills = skills
+      this.desc = desc;
+      this.skills = skills;
 
-            this.$store.commit('loading/setLoading', false)
-        },
-        async getWorks () {
-            this.$store.commit('loading/setLoading', true)
-            const response = await axios.get('/api/works')
-            this.works = response.data
-            this.$store.commit('loading/setLoading', false)
-        },
+      this.$store.commit("loading/setLoading", false);
     },
-    computed: {
-        category () {
-            return this.$store.state.cate.category
-        },
-        loading () {
-            return this.$store.state.loading.loading
-        }
+    async getWorks() {
+      this.$store.commit("loading/setLoading", true);
+      const response = await axios.get("/api/works");
+      this.works = response.data;
+      this.$store.commit("loading/setLoading", false);
+    }
+  },
+  computed: {
+    category() {
+      return this.$store.state.cate.category;
     },
-    beforeCreate() {
-        this.$store.commit('header/isAbout')
-        this.$store.commit('cate/resetCate')
-    },
-    created: function () {
-        this.$store.commit('cate/resetCate')
-        this.$store.commit('header/setIsSmall', true)
-        this.getAbout()
-        this.getWorks()
-    },
-}
+    loading() {
+      return this.$store.state.loading.loading;
+    }
+  },
+  beforeCreate() {
+    this.$store.commit("header/isAbout");
+    this.$store.commit("cate/resetCate");
+  },
+  created: function() {
+    this.$store.commit("cate/resetCate");
+    this.$store.commit("header/setIsSmall", true);
+    this.getAbout();
+    this.getWorks();
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-.v-enter-active, .v-leave-active, e {
+.v-enter-active,
+.v-leave-active {
   transition: opacity 1s, transform 1s;
 }
 
@@ -109,55 +105,47 @@ export default {
 }
 
 .text-font {
-    font-family: 'Kosugi Maru';
-}
-
-.wrapper{
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0;
-    max-width: 400px;
+  font-family: "Kosugi Maru";
 }
 
 .title {
-    font-size: calc(45px + 1vw);
-    color: rgb(46, 46, 46);
+  font-size: calc(45px + 1vw);
+  color: rgb(46, 46, 46);
 }
 
 .text {
-    font-size: calc(14px + 0.25vw);
-    padding: 10px;
-    line-height: calc(30px + 0.5vw);
-    letter-spacing: 0.2em;
-    color: rgb(46, 46, 46);
-    white-space: pre-line;
+  font-size: calc(14px + 0.25vw);
+  padding: 10px;
+  line-height: calc(30px + 0.5vw);
+  letter-spacing: 0.2em;
+  color: rgb(46, 46, 46);
+  white-space: pre-line;
 }
 
 .cate-wrap {
-    text-align: center;
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
 }
 
 .skill-wrap {
-    padding: 10px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
-    .wrapper {
-        width: 85%;
-    }
-    .title {
-        font-size: 52px;
-    }
 
-    .text {
-        font-size: calc(14px + 0.25vw);
-        line-height: 30px;
-        letter-spacing: 0.4em;
-    }
+  .title {
+    font-size: 52px;
+  }
 
-    .skill-wrap {
-        margin-top: 10px;
-    }
+  .text {
+    font-size: calc(14px + 0.25vw);
+    line-height: 30px;
+    letter-spacing: 0.4em;
+  }
 }
-
 </style>

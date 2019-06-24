@@ -47,8 +47,10 @@ export default {
 }
 
 .main {
-  background: rgba(224, 224, 224, 0.3);
-  margin-top: 50px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
 }
 
 .btn {
@@ -68,11 +70,6 @@ export default {
     color: #fff;
 }
 @media screen and (min-width: 768px) {
-  .main {
-    width: 50%;
-    margin-left: 50%;
-  }
-
   .btn {
     display: none;
   }

@@ -23,10 +23,10 @@ export default {
 .skill {
     display: inline-block;
     padding: 0.2em 1em;
-    width: 25%;
+    width: 20%;
     border-radius: 3px;
     font-size: calc(26px + 1vw);
-    margin-bottom: 5px;
+    margin: 0 5px 5px 5px;
 }
 
 .front {
@@ -48,6 +48,7 @@ export default {
     .skill {
         font-size: 34px;
         margin-bottom: 10px;
+        width: 16%;
     }
 }
 </style>
