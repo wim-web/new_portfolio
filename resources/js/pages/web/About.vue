@@ -107,9 +107,9 @@ export default {
 }
 
 .text {
-  font-size: calc(18px + 0.25vw);
+  font-size: calc(16px + 0.25vw);
   padding: 10px;
-  line-height: calc(30px + 0.5vw);
+  line-height: 34px;
   letter-spacing: 0.2em;
   color: rgb(46, 46, 46);
   white-space: pre-line;
@@ -144,8 +144,8 @@ export default {
   }
 
   .text {
-    font-size: calc(18px + 0.25vw);
-    line-height: 30px;
+    font-size: calc(16px + 0.25vw);
+    line-height: 34px;
     letter-spacing: 0.4em;
   }
 }
