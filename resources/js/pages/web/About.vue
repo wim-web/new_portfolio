@@ -19,6 +19,7 @@
             />
         </transition-group>
       </div>
+
       <h3 class="title">works</h3>
       <div class="work-wrap">
         <Work v-for="work in works" :key="work.id" :item="work"/>
@@ -37,7 +38,8 @@ export default {
     return {
       desc: "",
       skills: [],
-      works: []
+      works: [],
+      loading: false,
     };
   },
   components: {
@@ -47,41 +49,31 @@ export default {
     Work
   },
   methods: {
-    async getAbout() {
-      this.$store.commit("loading/setLoading", true);
-      const response = await axios.get("/api/about");
-      const desc = response.data["user"].desc;
-      const skills = response.data["skill"];
+    async fetchAbout() {
+      const response = await axios.get("/api/about").catch(err => err.response);
+      if (response.status !== 200) return alert('サーバーエラー');
 
-      this.desc = desc;
-      this.skills = skills;
-
-      this.$store.commit("loading/setLoading", false);
+      this.desc = response.data["user"].desc;
+      this.skills = response.data["skill"];
     },
-    async getWorks() {
-      this.$store.commit("loading/setLoading", true);
-      const response = await axios.get("/api/works");
+    async fetchWorks() {
+      const response = await axios.get("/api/works").catch(err => err.response);
+      if (response.status !== 200) return alert('サーバーエラー');
+
       this.works = response.data;
-      this.$store.commit("loading/setLoading", false);
-    }
+    },
   },
   computed: {
     category() {
       return this.$store.state.cate.category;
     },
-    loading() {
-      return this.$store.state.loading.loading;
-    }
   },
-  beforeCreate() {
-    this.$store.commit("header/isAbout");
+  created: async function() {
     this.$store.commit("cate/resetCate");
-  },
-  created: function() {
-    this.$store.commit("cate/resetCate");
-    this.$store.commit("header/setIsSmall", true);
-    this.getAbout();
-    this.getWorks();
+    this.loading = true;
+    await this.fetchAbout();
+    await this.fetchWorks();
+    this.loading = false;
   }
 };
 </script>

@@ -2883,6 +2883,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 
 
@@ -2892,7 +2893,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     return {
       desc: "",
       skills: [],
-      works: []
+      works: [],
+      loading: false
     };
   },
   components: {
@@ -2902,28 +2904,35 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     Work: _components_Work__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   methods: {
-    getAbout: function () {
-      var _getAbout = _asyncToGenerator(
+    fetchAbout: function () {
+      var _fetchAbout = _asyncToGenerator(
       /*#__PURE__*/
       _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var response, desc, skills;
+        var response;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                this.$store.commit("loading/setLoading", true);
-                _context.next = 3;
-                return axios.get("/api/about");
+                _context.next = 2;
+                return axios.get("/api/about")["catch"](function (err) {
+                  return err.response;
+                });
 
-              case 3:
+              case 2:
                 response = _context.sent;
-                desc = response.data["user"].desc;
-                skills = response.data["skill"];
-                this.desc = desc;
-                this.skills = skills;
-                this.$store.commit("loading/setLoading", false);
 
-              case 9:
+                if (!(response.status !== 200)) {
+                  _context.next = 5;
+                  break;
+                }
+
+                return _context.abrupt("return", alert('サーバーエラー'));
+
+              case 5:
+                this.desc = response.data["user"].desc;
+                this.skills = response.data["skill"];
+
+              case 7:
               case "end":
                 return _context.stop();
             }
@@ -2931,14 +2940,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee, this);
       }));
 
-      function getAbout() {
-        return _getAbout.apply(this, arguments);
+      function fetchAbout() {
+        return _fetchAbout.apply(this, arguments);
       }
 
-      return getAbout;
+      return fetchAbout;
     }(),
-    getWorks: function () {
-      var _getWorks = _asyncToGenerator(
+    fetchWorks: function () {
+      var _fetchWorks = _asyncToGenerator(
       /*#__PURE__*/
       _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         var response;
@@ -2946,14 +2955,23 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                this.$store.commit("loading/setLoading", true);
-                _context2.next = 3;
-                return axios.get("/api/works");
+                _context2.next = 2;
+                return axios.get("/api/works")["catch"](function (err) {
+                  return err.response;
+                });
 
-              case 3:
+              case 2:
                 response = _context2.sent;
+
+                if (!(response.status !== 200)) {
+                  _context2.next = 5;
+                  break;
+                }
+
+                return _context2.abrupt("return", alert('サーバーエラー'));
+
+              case 5:
                 this.works = response.data;
-                this.$store.commit("loading/setLoading", false);
 
               case 6:
               case "end":
@@ -2963,31 +2981,52 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee2, this);
       }));
 
-      function getWorks() {
-        return _getWorks.apply(this, arguments);
+      function fetchWorks() {
+        return _fetchWorks.apply(this, arguments);
       }
 
-      return getWorks;
+      return fetchWorks;
     }()
   },
   computed: {
     category: function category() {
       return this.$store.state.cate.category;
-    },
-    loading: function loading() {
-      return this.$store.state.loading.loading;
     }
   },
-  beforeCreate: function beforeCreate() {
-    this.$store.commit("header/isAbout");
-    this.$store.commit("cate/resetCate");
-  },
-  created: function created() {
-    this.$store.commit("cate/resetCate");
-    this.$store.commit("header/setIsSmall", true);
-    this.getAbout();
-    this.getWorks();
-  }
+  created: function () {
+    var _created = _asyncToGenerator(
+    /*#__PURE__*/
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              this.$store.commit("cate/resetCate");
+              this.loading = true;
+              _context3.next = 4;
+              return this.fetchAbout();
+
+            case 4:
+              _context3.next = 6;
+              return this.fetchWorks();
+
+            case 6:
+              this.loading = false;
+
+            case 7:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3, this);
+    }));
+
+    function created() {
+      return _created.apply(this, arguments);
+    }
+
+    return created;
+  }()
 });
 
 /***/ }),
