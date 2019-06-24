@@ -7977,7 +7977,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".skill[data-v-4905b276] {\n  display: inline-block;\n  padding: 0.2em 1em;\n  width: 20%;\n  border-radius: 3px;\n  font-size: calc(26px + 1vw);\n  margin: 0 5px 5px 5px;\n}\n.front[data-v-4905b276] {\n  color: #005d97;\n  border: solid 2px #005d97;\n}\n.back[data-v-4905b276] {\n  color: #ff26c9;\n  border: solid 2px #ff26c9;\n}\n.others[data-v-4905b276] {\n  color: #19be3d;\n  border: solid 2px #19be3d;\n}\n@media screen and (min-width: 768px) {\n.skill[data-v-4905b276] {\n    font-size: 34px;\n    margin-bottom: 10px;\n    width: 16%;\n}\n}", ""]);
+exports.push([module.i, ".skill[data-v-4905b276] {\n  display: inline-block;\n  padding: 0.2em 0.5em;\n  border-radius: 3px;\n  font-size: calc(26px + 1vw);\n  margin: 0 5px 10px 5px;\n}\n.front[data-v-4905b276] {\n  color: #005d97;\n  border: solid 2px #005d97;\n}\n.back[data-v-4905b276] {\n  color: #ff26c9;\n  border: solid 2px #ff26c9;\n}\n.others[data-v-4905b276] {\n  color: #19be3d;\n  border: solid 2px #19be3d;\n}\n@media screen and (min-width: 768px) {\n.skill[data-v-4905b276] {\n    font-size: 34px;\n    margin-bottom: 10px;\n}\n}", ""]);
 
 // exports
 

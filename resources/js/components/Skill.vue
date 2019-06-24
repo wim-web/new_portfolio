@@ -22,11 +22,10 @@ export default {
 <style lang="scss" scoped>
 .skill {
     display: inline-block;
-    padding: 0.2em 1em;
-    width: 20%;
+    padding: 0.2em 0.5em;
     border-radius: 3px;
     font-size: calc(26px + 1vw);
-    margin: 0 5px 5px 5px;
+    margin: 0 5px 10px 5px;
 }
 
 .front {
@@ -48,7 +47,6 @@ export default {
     .skill {
         font-size: 34px;
         margin-bottom: 10px;
-        width: 16%;
     }
 }
 </style>
