@@ -3248,7 +3248,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   data: function data() {
     return {
-      work: {}
+      work: {},
+      loading: false
     };
   },
   components: {
@@ -3257,8 +3258,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     Loading: _components_Loading__WEBPACK_IMPORTED_MODULE_3__["default"]
   },
   methods: {
-    getWork: function () {
-      var _getWork = _asyncToGenerator(
+    fetchWork: function () {
+      var _fetchWork = _asyncToGenerator(
       /*#__PURE__*/
       _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
         var response;
@@ -3266,14 +3267,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                this.$store.commit('loading/setLoading', true);
+                this.loading = true;
                 _context.next = 3;
                 return axios.get("/api/works/".concat(this.id));
 
               case 3:
                 response = _context.sent;
                 this.work = response.data;
-                this.$store.commit('loading/setLoading', false);
+                this.loading = false;
 
               case 6:
               case "end":
@@ -3283,28 +3284,21 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee, this);
       }));
 
-      function getWork() {
-        return _getWork.apply(this, arguments);
+      function fetchWork() {
+        return _fetchWork.apply(this, arguments);
       }
 
-      return getWork;
+      return fetchWork;
     }()
   },
   computed: {
     category: function category() {
       return this.$store.state.cate.category;
-    },
-    loading: function loading() {
-      return this.$store.state.loading.loading;
     }
   },
-  beforeCreate: function beforeCreate() {
-    this.$store.commit('cate/resetCate');
-    this.$store.commit('header/isWork');
-  },
   created: function created() {
-    this.$store.commit('header/setIsSmall', true);
-    this.getWork();
+    this.$store.commit("cate/resetCate");
+    this.fetchWork();
   }
 });
 
@@ -8071,7 +8065,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".v-enter-active[data-v-3757e0b4], .v-leave-active[data-v-3757e0b4], e[data-v-3757e0b4] {\n  transition: opacity 1s, -webkit-transform 1s;\n  transition: opacity 1s, transform 1s;\n  transition: opacity 1s, transform 1s, -webkit-transform 1s;\n}\n.v-leave-active[data-v-3757e0b4] {\n  position: absolute;\n}\n.v-enter[data-v-3757e0b4] {\n  opacity: 0;\n  -webkit-transform: translateY(-10px);\n          transform: translateY(-10px);\n}\n.v-leave-to[data-v-3757e0b4] {\n  opacity: 0;\n  -webkit-transform: translateY(20px);\n          transform: translateY(20px);\n}\n.wrapper[data-v-3757e0b4] {\n  width: 80%;\n  margin: 0 auto;\n  padding: 20px 0;\n  max-width: 400px;\n}\n.image[data-v-3757e0b4] {\n  width: 100%;\n  margin-top: 10px;\n}\n.title__text[data-v-3757e0b4] {\n  font-size: calc(45px + 1vw);\n}\n.title__link[data-v-3757e0b4] {\n  position: relative;\n  display: inline-block;\n  font-weight: bold;\n  font-size: calc(22px + 0.25vw);\n  margin-left: 1em;\n  padding: 0.25em 0.5em;\n  text-decoration: none;\n  border-bottom: solid 3px #2e2e2e;\n  border-left: solid 3px #2e2e2e;\n  color: #2e2e2e;\n  transition: 0.4s;\n}\n.title__link[data-v-3757e0b4]:hover {\n  padding-left: 0.7em;\n  padding-right: 0.3em;\n}\n.text[data-v-3757e0b4] {\n  font-size: calc(14px + 0.25vw);\n  padding: 10px;\n  line-height: calc(30px + 0.5vw);\n  letter-spacing: 0.2em;\n  color: #2e2e2e;\n  white-space: pre-line;\n}\n.text-font[data-v-3757e0b4] {\n  font-family: \"Kosugi Maru\";\n}\n.cate-wrap[data-v-3757e0b4] {\n  text-align: center;\n}\n.skill-wrap[data-v-3757e0b4] {\n  padding: 10px;\n}\n@media screen and (min-width: 768px) {\ntitle__text[data-v-3757e0b4] {\n    font-size: 52px;\n}\n.text[data-v-3757e0b4] {\n    font-size: calc(14px + 0.25vw);\n    line-height: 30px;\n    letter-spacing: 0.4em;\n}\n}", ""]);
+exports.push([module.i, ".v-enter-active[data-v-3757e0b4],\n.v-leave-active[data-v-3757e0b4] {\n  transition: opacity 1s, -webkit-transform 1s;\n  transition: opacity 1s, transform 1s;\n  transition: opacity 1s, transform 1s, -webkit-transform 1s;\n}\n.v-leave-active[data-v-3757e0b4] {\n  position: absolute;\n}\n.v-enter[data-v-3757e0b4] {\n  opacity: 0;\n  -webkit-transform: translateY(-10px);\n          transform: translateY(-10px);\n}\n.v-leave-to[data-v-3757e0b4] {\n  opacity: 0;\n  -webkit-transform: translateY(20px);\n          transform: translateY(20px);\n}\n.wrapper[data-v-3757e0b4] {\n  width: 80%;\n  margin: 0 auto;\n  padding: 20px 0;\n  max-width: 800px;\n  text-align: center;\n}\n.image[data-v-3757e0b4] {\n  width: 100%;\n  margin-top: 10px;\n  max-width: 250px;\n}\n.title__text[data-v-3757e0b4] {\n  font-size: calc(45px + 1vw);\n}\n.title__link[data-v-3757e0b4] {\n  position: relative;\n  display: inline-block;\n  font-weight: bold;\n  font-size: calc(22px + 0.25vw);\n  margin-left: 1em;\n  padding: 0.25em 0.5em;\n  text-decoration: none;\n  border-bottom: solid 3px #2e2e2e;\n  border-left: solid 3px #2e2e2e;\n  color: #2e2e2e;\n  transition: 0.4s;\n}\n.title__link[data-v-3757e0b4]:hover {\n  padding-left: 0.7em;\n  padding-right: 0.3em;\n}\n.text[data-v-3757e0b4] {\n  font-size: calc(16px + 0.25vw);\n  padding: 10px;\n  line-height: 34px;\n  letter-spacing: 0.2em;\n  color: #2e2e2e;\n  white-space: pre-line;\n  word-break: break-all;\n  text-align: left;\n}\n.text-font[data-v-3757e0b4] {\n  font-family: \"Kosugi Maru\";\n}\n.cate-wrap[data-v-3757e0b4] {\n  text-align: center;\n  max-width: 550px;\n  margin: 0 auto;\n}\n.skill-wrap[data-v-3757e0b4] {\n  padding: 10px;\n  text-align: center;\n  margin-top: 10px;\n  max-width: 500px;\n  margin: 0 auto;\n}\n@media screen and (min-width: 768px) {\ntitle__text[data-v-3757e0b4] {\n    font-size: 58px;\n}\n.text[data-v-3757e0b4] {\n    font-size: calc(16px + 0.25vw);\n    line-height: 34px;\n    letter-spacing: 0.4em;\n}\n.image[data-v-3757e0b4] {\n    max-width: 300px;\n}\n}", ""]);
 
 // exports
 
@@ -42479,7 +42473,7 @@ var render = function() {
                     },
                     [
                       _c("i", { staticClass: "fa fa-caret-right" }),
-                      _vm._v(" Goto!\r\n            ")
+                      _vm._v(" Goto!\n      ")
                     ]
                   )
                 : _vm._e()
@@ -42487,7 +42481,7 @@ var render = function() {
             _vm._v(" "),
             _c("img", {
               staticClass: "image",
-              attrs: { src: _vm.work.thumbnail, alt: "" }
+              attrs: { src: _vm.work.thumbnail }
             }),
             _vm._v(" "),
             _c("p", { staticClass: "text text-font" }, [
