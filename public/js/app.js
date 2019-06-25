@@ -3066,19 +3066,35 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       formData: {
-        name: '',
-        password: ''
+        name: "",
+        password: ""
       }
     };
   },
   methods: {
     toTopPage: function toTopPage() {
-      this.$router.push('/');
-      this.$store.dispatch('header/resetState');
+      this.$router.push("/");
     },
     login: function () {
       var _login = _asyncToGenerator(
@@ -3090,7 +3106,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return axios.post('/api/login', this.formData)["catch"](function (err) {
+                return axios.post("/api/login", this.formData)["catch"](function (err) {
                   return err.response;
                 });
 
@@ -3102,19 +3118,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   break;
                 }
 
-                this.$store.commit('auth/login');
-                this.$router.push('/edit');
+                this.$store.commit("auth/login");
+                this.$router.push("/edit");
                 return _context.abrupt("return", false);
 
               case 9:
                 if (response.status === 422) {
                   alert(response.data.message);
                 } else {
-                  alert('予期せぬエラー');
+                  alert("予期せぬエラー");
                 }
 
               case 10:
-                this.$router.push('/login');
+                this.$router.push("/login");
 
               case 11:
               case "end":
