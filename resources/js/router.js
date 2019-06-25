@@ -6,7 +6,6 @@ import store from './store/index'
 /* web */
 import Top from './pages/web/Top'
 import About from './pages/web/About'
-import Works from './pages/web/Works'
 import WorkDetail from './pages/web/WorkDetail'
 import Login from './pages/web/Login'
 
