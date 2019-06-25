@@ -3285,14 +3285,25 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 this.loading = true;
                 _context.next = 3;
-                return axios.get("/api/works/".concat(this.id));
+                return axios.get("/api/works/".concat(this.id))["catch"](function (err) {
+                  return err.response;
+                });
 
               case 3:
                 response = _context.sent;
+
+                if (!(response.status !== 200)) {
+                  _context.next = 6;
+                  break;
+                }
+
+                return _context.abrupt("return", alert('error'));
+
+              case 6:
                 this.work = response.data;
                 this.loading = false;
 
-              case 6:
+              case 8:
               case "end":
                 return _context.stop();
             }
